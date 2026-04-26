@@ -1,0 +1,527 @@
+/* ============================================
+   PRAXIS
+   ============================================ */
+
+/* ── Hero ── */
+.praxis-hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(135deg, #0d2145 0%, #1a3a6b 60%, #1a5276 100%);
+  overflow: hidden;
+  padding-bottom: var(--space-2xl);
+}
+
+.praxis-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.praxis-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.18;
+}
+
+.praxis-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    rgba(13, 33, 69, 0.95) 0%,
+    rgba(26, 58, 107, 0.8) 60%,
+    rgba(74, 184, 216, 0.1) 100%
+  );
+}
+
+.praxis-hero__deco {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.praxis-hero__deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 184, 216, 0.12);
+}
+
+.praxis-hero__deco-circle--1 {
+  width: 600px;
+  height: 600px;
+  top: -20%;
+  right: -5%;
+  background: radial-gradient(
+    circle,
+    rgba(74, 184, 216, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+.praxis-hero__deco-circle--2 {
+  width: 350px;
+  height: 350px;
+  bottom: -10%;
+  right: 22%;
+  border-color: rgba(74, 184, 216, 0.08);
+}
+
+.praxis-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  padding-top: calc(var(--navbar-height) + var(--space-2xl));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.praxis-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.praxis-hero__breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.praxis-hero__breadcrumb a:hover {
+  color: var(--color-secondary);
+}
+
+.praxis-hero__breadcrumb span {
+  color: var(--color-secondary);
+}
+
+.praxis-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  background: rgba(74, 184, 216, 0.15);
+  border: 1px solid rgba(74, 184, 216, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--color-secondary);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.praxis-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  max-width: 700px;
+}
+
+.praxis-hero__subtitle {
+  font-size: var(--fs-base);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 620px;
+}
+
+/* ── Stats Bar ── */
+.praxis-stats {
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 3;
+}
+
+.praxis-stats__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.praxis-stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-lg);
+  text-align: center;
+  border-right: 1px solid var(--color-neutral-light);
+}
+
+.praxis-stats__item:last-child {
+  border-right: none;
+}
+
+.praxis-stats__number {
+  font-family: var(--font-body);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.praxis-stats__label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+}
+
+/* ── Über uns Section ── */
+.praxis-about {
+  padding-block: var(--space-3xl);
+  background: var(--color-bg);
+}
+
+.praxis-about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.praxis-about__images {
+  position: relative;
+  height: clamp(400px, 50vw, 580px);
+}
+
+.praxis-about__img-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72%;
+  height: 88%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.praxis-about__img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 8s ease;
+}
+
+.praxis-about__img-main:hover img {
+  transform: scale(1.04);
+}
+
+.praxis-about__img-secondary {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 52%;
+  height: 55%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--color-white);
+}
+
+.praxis-about__img-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 8s ease;
+}
+
+.praxis-about__img-secondary:hover img {
+  transform: scale(1.04);
+}
+
+.praxis-about__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.praxis-about__tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(74, 184, 216, 0.12);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.praxis-about__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.praxis-about__title span {
+  color: var(--color-secondary);
+}
+
+.praxis-about__text {
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  line-height: 1.85;
+}
+
+/* ── Team Section ── */
+.praxis-team {
+  padding-block: var(--space-3xl);
+  background: var(--color-white);
+}
+
+.praxis-team__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.praxis-team__tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(74, 184, 216, 0.12);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.praxis-team__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+.praxis-team__subtitle {
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  max-width: 540px;
+  margin-inline: auto;
+  line-height: 1.8;
+}
+
+.praxis-team__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.praxis-team__card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.praxis-team__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.praxis-team__card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.praxis-team__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.praxis-team__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-lg);
+}
+
+.praxis-team__card-role {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.praxis-team__card-name {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.praxis-team__card-text {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ── Praxisräume ── */
+.praxis-rooms {
+  padding-block: var(--space-3xl);
+  background: var(--color-bg);
+}
+
+.praxis-rooms__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.praxis-rooms__tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(74, 184, 216, 0.12);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.praxis-rooms__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.praxis-rooms__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.praxis-rooms__card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--color-white);
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.praxis-rooms__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.praxis-rooms__card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.praxis-rooms__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 8s ease;
+}
+
+.praxis-rooms__card:hover .praxis-rooms__card-image img {
+  transform: scale(1.05);
+}
+
+.praxis-rooms__card-body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.praxis-rooms__card-title {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.praxis-rooms__card-text {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ============================================
+     RESPONSIVE
+     ============================================ */
+@media (max-width: 1024px) {
+  .praxis-about__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .praxis-about__images {
+    height: clamp(320px, 70vw, 480px);
+  }
+
+  .praxis-stats__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .praxis-stats__item:nth-child(2) {
+    border-right: none;
+  }
+
+  .praxis-rooms__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .praxis-team__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .praxis-stats__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .praxis-rooms__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .praxis-team__card {
+    flex-direction: column;
+  }
+
+  .praxis-team__card-image {
+    width: 100%;
+    height: 200px;
+  }
+}

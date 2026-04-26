@@ -1,0 +1,182 @@
+/* ============================================
+   TEAM
+   ============================================ */
+.team {
+  padding-block: var(--space-3xl);
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.team::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(74, 184, 216, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* ── Header ── */
+.team__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.team__tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(74, 184, 216, 0.12);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.team__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+.team__subtitle {
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  max-width: 540px;
+  margin-inline: auto;
+  line-height: 1.8;
+}
+
+/* ── Grid ── */
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+/* ── Card ── */
+.team__card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.team__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team__card-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+}
+
+.team__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 8s ease;
+}
+
+.team__card:hover .team__card-image img {
+  transform: scale(1.04);
+}
+
+.team__card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(26, 58, 107, 0.45) 100%
+  );
+}
+
+/* ── Card Body ── */
+.team__card-body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.team__card-role {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.team__card-name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.team__card-text {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+.team__card-divider {
+  height: 1px;
+  background: var(--color-neutral-light);
+  margin-block: var(--space-xs);
+}
+
+.team__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.team__card-tag {
+  padding: 4px 10px;
+  background: var(--color-neutral-light);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* ============================================
+     RESPONSIVE
+     ============================================ */
+@media (max-width: 1024px) {
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
