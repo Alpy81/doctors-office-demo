@@ -64,7 +64,7 @@ export default function WhyUs() {
             </h2>
 
             <p className="why-us__text">
-              In der Praxis Dr. Chadli verbinden wir medizinische Exzellenz mit
+              In unserer Praxis verbinden wir medizinische Exzellenz mit
               menschlicher Wärme. Wir glauben, dass gute Medizin dann entsteht,
               wenn Arzt und Patient einander vertrauen.
             </p>

@@ -34,7 +34,7 @@ export default function KontaktPreview() {
             </div>
             <div className="kontakt-preview__address">
               <span className="kontakt-preview__address-line">
-                Praxis Dr. Faycal Chadli
+                Praxis Docteur en Medicine/Univ. Oran Faycal Chadli
               </span>
               <span className="kontakt-preview__address-line">
                 Alt-Fechenheim 76
@@ -101,9 +101,9 @@ export default function KontaktPreview() {
                     Telefon
                   </span>
                   <a
-                    href="tel:+490000000000"
+                    href="tel:+4969941392118"
                     className="kontakt-preview__contact-value">
-                    +49 (0) 000 000 000
+                    +49 (69) 94 13 92 118
                   </a>
                 </div>
               </div>

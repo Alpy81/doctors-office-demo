@@ -63,7 +63,8 @@ export default function Praxis() {
             Über unsere Praxis
           </div>
           <h1 className="praxis-hero__title">
-            Willkommen in der Praxis Dr. Chadli
+            Willkommen in der Praxis Docteur en Medicine/Univ. Oran Faycal
+            Chadli
           </h1>
           <p className="praxis-hero__subtitle">
             Eine neue Praxis mit einem klaren Ziel: Medizin, die den Menschen in
@@ -109,7 +110,7 @@ export default function Praxis() {
                 Medizin mit <span>Herz & Kompetenz</span>
               </h2>
               <p className="praxis-about__text">
-                Die Praxis Dr. Chadli ist eine neue, modern ausgestattete
+                Unsere Praxis ist eine neue, modern ausgestattete
                 Gemeinschaftspraxis in Frankfurt am Main, die Dr. Faycal Mahmoud
                 Chadli gemeinsam mit seiner Frau führt. Als Facharzt für Innere
                 Medizin, zertifizierter Diabetologe DDG, Hypertensiologe DHL und
@@ -117,10 +118,10 @@ export default function Praxis() {
                 aus renommierten Kliniken in Deutschland und Frankreich mit.
               </p>
               <p className="praxis-about__text">
-                Unsere Praxis steht für eine Medizin, die zuhört. Wir nehmen uns
-                Zeit für Sie — für Ihre Fragen, Ihre Sorgen und Ihre
-                Gesundheitsziele. Dabei verbinden wir modernste Diagnostik und
-                Therapie mit menschlicher Wärme und einem offenen Ohr.
+                Wir stehen für eine Medizin, die zuhört. Wir nehmen uns Zeit für
+                Sie — für Ihre Fragen, Ihre Sorgen und Ihre Gesundheitsziele.
+                Dabei verbinden wir modernste Diagnostik und Therapie mit
+                menschlicher Wärme und einem offenen Ohr.
               </p>
               <p className="praxis-about__text">
                 Von der hausärztlichen Grundversorgung über spezialisierte
@@ -211,7 +212,7 @@ export default function Praxis() {
               marginBottom: "var(--space-sm)",
               lineHeight: 1.4,
             }}>
-            Lernen Sie Dr. Faycal Mahmoud Chadli näher kennen
+            Lernen Sie Docteur en Medicine/Univ. Oran Faycal Chadli näher kennen
           </p>
           <p
             style={{
@@ -241,7 +242,7 @@ export default function Praxis() {
               textDecoration: "none",
               boxShadow: "0 6px 20px rgba(192, 57, 43, 0.40)",
             }}>
-            Vita von Dr. Chadli entdecken →
+            Vita des Arztes entdecken →
           </NavLink>
         </div>
       </section>

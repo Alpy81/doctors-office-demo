@@ -39,7 +39,10 @@ export default function Footer() {
             <NavLink to="/" className="footer__logo">
               <img src={logo} alt="Praxis Dr. Chadli Logo" />
               <div className="footer__logo-text">
-                <span className="footer__logo-name">Praxis Dr. Chadli</span>
+                <span className="footer__logo-name">
+                  Praxis Dr. Docteur en Medicine/Univ. <br />
+                  Oran Chadli
+                </span>
                 <span className="footer__logo-subtitle">
                   Diabetologie · Hausarzt · Innere Medizin
                 </span>

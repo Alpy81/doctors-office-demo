@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Phone, CalendarCheck, Heart, Activity } from "lucide-react";
+import { CalendarCheck, Activity } from "lucide-react";
 import "./Hero.css";
 import praxisteam from "../../assets/images/praxisteam.jpg";
 import arztUndAerztin from "../../assets/images/arzt-und-aerztin.jpg";
@@ -41,9 +41,10 @@ export default function Hero() {
           </h1>
 
           <p className="hero__subtitle">
-            Willkommen in der Praxis Dr. Chadli — Ihr erfahrener Diabetologe und
-            Hausarzt. Wir begleiten Sie mit modernster Medizin, persönlicher
-            Fürsorge und einem Team, das Sie kennt.
+            Willkommen in der Praxis Docteur en Medicine/Univ. Oran Faycal
+            Chadli Chadli — Ihr erfahrener Diabetologe und Hausarzt. Wir
+            begleiten Sie mit modernster Medizin, persönlicher Fürsorge und
+            einem Team, das Sie kennt.
           </p>
 
           {/* Statistiken */}
@@ -82,31 +83,9 @@ export default function Hero() {
         {/* Rechte Seite */}
         <div className="hero__right">
           <div className="hero__image-card">
-            {/* Floating Card oben */}
-            <div className="hero__float-card hero__float-card--top">
-              <div className="hero__float-icon hero__float-icon--blue">
-                <Heart size={20} />
-              </div>
-              <div className="hero__float-text">
-                <strong>Diabetologie</strong>
-                <span>Spezialisierte Betreuung</span>
-              </div>
-            </div>
-
             {/* Hauptbild */}
             <div className="hero__image-frame">
               <img src={arztUndAerztin} alt="Arzt und Ärztin" />
-            </div>
-
-            {/* Floating Card unten */}
-            <div className="hero__float-card hero__float-card--bottom">
-              <div className="hero__float-icon hero__float-icon--red">
-                <Phone size={20} />
-              </div>
-              <div className="hero__float-text">
-                <strong>Jetzt erreichbar</strong>
-                <span>Mo – Fr, 08:00 – 18:00</span>
-              </div>
             </div>
           </div>
         </div>

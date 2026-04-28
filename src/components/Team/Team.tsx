@@ -6,9 +6,9 @@ import mitarbeiterin from "../../assets/images/mitarbeiterin.jpg";
 const team = [
   {
     image: arzt,
-    alt: "Dr. Faycal Chadli",
+    alt: "Docteur en Medicine/Univ. Oran Faycal Chadli",
     role: "Facharzt & Praxisinhaber",
-    name: "Dr. med. Faycal Chadli",
+    name: "Docteur en Medicine/Univ. Oran Faycal Chadli",
     text: "Facharzt für Innere Medizin und zertifizierter Diabetologe. Mit langjähriger Erfahrung und tiefem Einfühlungsvermögen begleitet er seine Patienten auf dem Weg zu mehr Gesundheit und Lebensqualität.",
     tags: ["Diabetologie", "Innere Medizin", "DMP-Programme"],
   },

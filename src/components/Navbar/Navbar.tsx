@@ -57,7 +57,9 @@ export default function Navbar() {
         <NavLink to="/" className="navbar__logo" onClick={closeMobile}>
           <img src={logo} alt="Praxis Logo" />
           <div className="navbar__logo-text">
-            <span className="navbar__logo-name">Praxis Dr. Chadli</span>
+            <span className="navbar__logo-name">
+              Praxis Docteur en Medicine/Univ. Oran Chadli
+            </span>
             <span className="navbar__logo-subtitle">
               Diabetologie · Hausarzt · Innere Medizin
             </span>
@@ -88,6 +90,9 @@ export default function Navbar() {
             </div>
           </div>
 
+          <NavLink to="/leistungen/diabetologie" className="navbar__link">
+            Diabetologie
+          </NavLink>
           <NavLink to="/vita" className="navbar__link">
             Vita
           </NavLink>
@@ -154,6 +159,12 @@ export default function Navbar() {
           className="navbar__mobile-link"
           onClick={closeMobile}>
           Praxis
+        </NavLink>
+        <NavLink
+          to="/leistungen/diabetologie"
+          className="navbar__mobile-link"
+          onClick={closeMobile}>
+          Diabetologie
         </NavLink>
         <NavLink
           to="/vita"
