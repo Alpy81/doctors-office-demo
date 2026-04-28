@@ -149,10 +149,12 @@ export default function Vita() {
             <GraduationCap size={14} />
             Werdegang & Qualifikationen
           </div>
-          <h1 className="vita-hero__title">Dr. med. Faycal Mahmoud Chadli</h1>
+          <h1 className="vita-hero__title">
+            Doctuer en Medicine/Univ.Oran Faycal Chadli
+          </h1>
           <p className="vita-hero__subtitle">
-            Facharzt für Innere Medizin · Diabetologe DDG · Hypertensiologe DHL
-            · Adiposiologe DAG/DDG
+            Facharzt für Innere Medizin · Diabetologe DDG/LAK · Hypertensiologe
+            DHL · Adiposiologe DAG/DDG
           </p>
         </div>
       </section>
@@ -176,7 +178,9 @@ export default function Vita() {
                   </span>
                   <div className="vita-sidebar__divider" />
                   <div className="vita-sidebar__tags">
-                    <span className="vita-sidebar__tag">Diabetologe DDG</span>
+                    <span className="vita-sidebar__tag">
+                      Diabetologe DDG/LAK
+                    </span>
                     <span className="vita-sidebar__tag">
                       Hypertensiologe DHL
                     </span>

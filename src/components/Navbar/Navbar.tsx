@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { ChevronDown, Phone } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
 
@@ -66,6 +66,10 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="navbar__nav">
+          <NavLink to="/praxis" className="navbar__link">
+            Praxis
+          </NavLink>
+
           {/* Leistungen Dropdown */}
           <div className="navbar__dropdown">
             <button className="navbar__dropdown-trigger">
@@ -84,9 +88,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          <NavLink to="/praxis" className="navbar__link">
-            Praxis
-          </NavLink>
           <NavLink to="/vita" className="navbar__link">
             Vita
           </NavLink>
@@ -97,7 +98,6 @@ export default function Navbar() {
 
         {/* CTA */}
         <NavLink to="/kontakt" className="navbar__cta">
-          <Phone size={16} />
           Termin vereinbaren
         </NavLink>
 

@@ -124,7 +124,7 @@ export default function Hausaerztlich() {
                   Jetzt Termin buchen
                 </NavLink>
                 <a
-                  href="tel:+490000000000"
+                  href="tel:+4969412430"
                   className="leistung-sidebar__btn leistung-sidebar__btn--outline">
                   <Phone size={17} />
                   Anrufen
