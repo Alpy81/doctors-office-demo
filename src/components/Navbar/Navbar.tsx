@@ -7,8 +7,6 @@ import logo from "../../assets/images/logo.png";
 const leistungen = [
   { label: "Hausärztliche Versorgung", path: "/leistungen/hausaerztlich" },
   { label: "Internistische Leistungen", path: "/leistungen/internistisch" },
-  { label: "Diabetologie", path: "/leistungen/diabetologie" },
-  { label: "Schulungen & Ernährungsberatung", path: "/leistungen/schulungen" },
   {
     label: "Vorsorge- & Check-up-Untersuchungen",
     path: "/leistungen/vorsorge",
@@ -18,15 +16,21 @@ const leistungen = [
     label: "Psychosomatische Grundversorgung",
     path: "/leistungen/psychosomatik",
   },
-  { label: "DMP-Programme", path: "/leistungen/dmp" },
   { label: "Adipositas-Therapie & Hypertonie", path: "/leistungen/adipositas" },
   { label: "IGeL-Leistungen", path: "/leistungen/igel" },
+];
+
+const diabetologie = [
+  { label: "Diabetologie", path: "/leistungen/diabetologie" },
+  { label: "DMP-Programme", path: "/leistungen/dmp" },
+  { label: "Schulungen & Ernährungsberatung", path: "/leistungen/schulungen" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [accordionOpen, setAccordionOpen] = useState(false);
+  const [diabetologieOpen, setDiabetologieOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -55,14 +59,12 @@ export default function Navbar() {
       <div className="navbar__inner">
         {/* Logo */}
         <NavLink to="/" className="navbar__logo" onClick={closeMobile}>
-          <img src={logo} alt="Praxis Logo" />
-          <div className="navbar__logo-text">
-            <span className="navbar__logo-name">
-              Praxis Docteur en Medicine/Univ. Oran Chadli
-            </span>
-            <span className="navbar__logo-subtitle">
-              Diabetologie · Hausarzt · Innere Medizin
-            </span>
+          <div className="navbar__logo-wrapper">
+            <div className="navbar__logo-row">
+              <span className="navbar__logo-name">Praxis</span>
+              <img src={logo} alt="Praxis Logo" />
+              <span className="navbar__logo-name">Chadli</span>
+            </div>
           </div>
         </NavLink>
 
@@ -90,9 +92,23 @@ export default function Navbar() {
             </div>
           </div>
 
-          <NavLink to="/leistungen/diabetologie" className="navbar__link">
-            Diabetologie
-          </NavLink>
+          {/* Diabetologie Dropdown */}
+          <div className="navbar__dropdown">
+            <button className="navbar__dropdown-trigger">
+              Diabetologie
+              <ChevronDown className="navbar__dropdown-icon" size={16} />
+            </button>
+            <div className="navbar__dropdown-menu">
+              {diabetologie.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className="navbar__dropdown-item">
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
           <NavLink to="/vita" className="navbar__link">
             Vita
           </NavLink>
@@ -160,12 +176,39 @@ export default function Navbar() {
           onClick={closeMobile}>
           Praxis
         </NavLink>
-        <NavLink
-          to="/leistungen/diabetologie"
-          className="navbar__mobile-link"
-          onClick={closeMobile}>
-          Diabetologie
-        </NavLink>
+        <div className="navbar__mobile-accordion">
+          <button
+            className="navbar__mobile-accordion-trigger"
+            onClick={() => setDiabetologieOpen(!diabetologieOpen)}>
+            Diabetologie
+            <ChevronDown
+              size={18}
+              style={{
+                transform: diabetologieOpen ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </button>
+          {diabetologieOpen && (
+            <div className="navbar__mobile-accordion-items">
+              {diabetologie.map((item) => (
+                <button
+                  key={item.path}
+                  className="navbar__mobile-accordion-item"
+                  onClick={() => handleDropdownItemClick(item.path)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    textAlign: "left",
+                    cursor: "pointer",
+                    width: "100%",
+                  }}>
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
         <NavLink
           to="/vita"
           className="navbar__mobile-link"

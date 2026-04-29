@@ -282,7 +282,7 @@ export default function Kontakt() {
                         Adresse
                       </span>
                       <span className="kontakt-sidebar__item-value">
-                        Praxis Docteur en Medicine/Univ. Oran Faycal Chadli
+                        Praxis Chadli
                         <br />
                         1. Obergeschoss
                         <br />

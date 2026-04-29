@@ -37,15 +37,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer__brand">
             <NavLink to="/" className="footer__logo">
-              <img src={logo} alt="Praxis Dr. Chadli Logo" />
-              <div className="footer__logo-text">
-                <span className="footer__logo-name">
-                  Praxis Dr. Docteur en Medicine/Univ. <br />
-                  Oran Chadli
-                </span>
-                <span className="footer__logo-subtitle">
-                  Diabetologie · Hausarzt · Innere Medizin
-                </span>
+              <div className="footer__logo-wrapper">
+                <div className="footer__logo-row">
+                  <span className="footer__logo-name">Praxis</span>
+                  <img src={logo} alt="Praxis Dr. Chadli Logo" />
+                  <span className="footer__logo-name">Chadli</span>
+                </div>
               </div>
             </NavLink>
             <div className="footer__divider" />

@@ -43,13 +43,26 @@
 }
 
 .navbar__logo img {
-  height: 52px;
+  height: 60px;
   width: auto;
   transition: height var(--transition-base);
 }
 
 .navbar.scrolled .navbar__logo img {
   height: 44px;
+}
+
+.navbar__logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.navbar__logo-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .navbar__logo-text {
@@ -60,7 +73,7 @@
 
 .navbar__logo-name {
   font-family: var(--font-heading);
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-size: clamp(1.5rem, 1.4vw, 1.2rem);
   font-weight: 700;
   color: var(--color-primary);
   white-space: nowrap;
@@ -275,9 +288,13 @@
   display: block;
   width: 26px;
   height: 2px;
-  background: var(--color-primary);
+  background: var(--color-white);
   border-radius: var(--radius-full);
   transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.navbar.scrolled .navbar__burger span {
+  background: var(--color-primary);
 }
 
 .navbar__burger.open span:nth-child(1) {
