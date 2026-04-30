@@ -9,7 +9,6 @@ import {
   TrendingDown,
   Stethoscope,
   CalendarCheck,
-  Phone,
   ArrowRight,
   ChevronRight,
   BarChart2,

@@ -10,7 +10,6 @@ import {
   Scissors,
   CalendarCheck,
   Brain,
-  Phone,
   ArrowRight,
   ChevronRight,
 } from "lucide-react";
