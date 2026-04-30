@@ -5,7 +5,6 @@ import {
   Award,
   ChevronRight,
   MapPin,
-  CalendarCheck,
 } from "lucide-react";
 import "./Vita.css";
 import arzt from "../../assets/images/arzt.jpg";
@@ -191,10 +190,6 @@ export default function Vita() {
                     <span className="vita-sidebar__tag">Notarzt</span>
                     <span className="vita-sidebar__tag">Innere Medizin</span>
                   </div>
-                  <NavLink to="/kontakt" className="vita-sidebar__cta">
-                    <CalendarCheck size={16} />
-                    Termin vereinbaren
-                  </NavLink>
                 </div>
               </div>
             </aside>

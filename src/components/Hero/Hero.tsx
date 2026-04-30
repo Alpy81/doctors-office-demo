@@ -60,8 +60,8 @@ export default function Hero() {
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-number">2</span>
-              <span className="hero__stat-label">Ärzte</span>
+              <span className="hero__stat-number">∞</span>
+              <span className="hero__stat-label">Fürsorge</span>
             </div>
           </div>
 

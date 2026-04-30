@@ -15,10 +15,13 @@ import IGeL from "./pages/Leistungen/IGeL";
 import Vita from "./pages/Vita/Vita";
 import Praxis from "./pages/Praxis/Praxis";
 import Kontakt from "./pages/Kontakt/Kontakt";
+import ScrollToTop from "./components/ScrollToTop";
+import Karriere from "./pages/Karriere/Karriere";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -35,6 +38,7 @@ function App() {
         <Route path="/vita" element={<Vita />} />
         <Route path="/praxis" element={<Praxis />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/karriere" element={<Karriere />} />
       </Routes>
       <Footer />
     </BrowserRouter>

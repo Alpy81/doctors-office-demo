@@ -181,15 +181,7 @@ export default function Kontakt() {
                       value={formData.anliegen}
                       onChange={handleChange}>
                       <option value="">Bitte wählen...</option>
-                      <option value="termin">Terminvereinbarung</option>
-                      <option value="hausaerztlich">
-                        Hausärztliche Versorgung
-                      </option>
                       <option value="diabetologie">Diabetologie</option>
-                      <option value="dmp">DMP-Programm</option>
-                      <option value="vorsorge">Vorsorge & Check-up</option>
-                      <option value="igel">IGeL-Leistungen</option>
-                      <option value="sonstiges">Sonstiges</option>
                     </select>
                   </div>
 

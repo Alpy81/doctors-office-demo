@@ -1,0 +1,343 @@
+/* ============================================
+   KARRIERE
+   ============================================ */
+
+/* ── Hero ── */
+.karriere-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(135deg, #0d2145 0%, #1a3a6b 60%, #1a5276 100%);
+  overflow: hidden;
+  padding-bottom: var(--space-2xl);
+}
+
+.karriere-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.karriere-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.karriere-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    rgba(13, 33, 69, 0.95) 0%,
+    rgba(26, 58, 107, 0.8) 60%,
+    rgba(74, 184, 216, 0.1) 100%
+  );
+}
+
+.karriere-hero__deco {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.karriere-hero__deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 184, 216, 0.12);
+}
+
+.karriere-hero__deco-circle--1 {
+  width: 500px;
+  height: 500px;
+  top: -20%;
+  right: -5%;
+  background: radial-gradient(
+    circle,
+    rgba(74, 184, 216, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+.karriere-hero__deco-circle--2 {
+  width: 300px;
+  height: 300px;
+  bottom: -10%;
+  right: 20%;
+  border-color: rgba(74, 184, 216, 0.08);
+}
+
+.karriere-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  padding-top: calc(var(--navbar-height) + var(--space-2xl));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.karriere-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.karriere-hero__breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.karriere-hero__breadcrumb a:hover {
+  color: var(--color-secondary);
+}
+
+.karriere-hero__breadcrumb span {
+  color: var(--color-secondary);
+}
+
+.karriere-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  background: rgba(74, 184, 216, 0.15);
+  border: 1px solid rgba(74, 184, 216, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--color-secondary);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.karriere-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  max-width: 700px;
+}
+
+.karriere-hero__subtitle {
+  font-size: var(--fs-base);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 620px;
+}
+
+/* ── Main ── */
+.karriere-main {
+  padding-block: var(--space-3xl);
+  background: var(--color-bg);
+}
+
+.karriere-main__inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* ── Warum wir ── */
+.karriere-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.karriere-content__section-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.karriere-content__section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  border-radius: var(--radius-full);
+}
+
+.karriere-content__intro {
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  line-height: 1.85;
+}
+
+/* ── Benefits Grid ── */
+.karriere-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.karriere-benefit {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  transition: border-color var(--transition-base),
+    box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.karriere-benefit:hover {
+  border-color: var(--color-neutral-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.karriere-benefit__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(74, 184, 216, 0.12);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.karriere-benefit__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.karriere-benefit__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.karriere-benefit__text {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ── Sidebar ── */
+.karriere-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-md));
+}
+
+.karriere-sidebar__card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.karriere-sidebar__card--cta {
+  background: linear-gradient(135deg, #0d2145, #1a3a6b);
+}
+
+.karriere-sidebar__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.karriere-sidebar__card--cta .karriere-sidebar__title {
+  color: var(--color-white);
+}
+
+.karriere-sidebar__text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.karriere-sidebar__card--cta .karriere-sidebar__text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.karriere-sidebar__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #ed8c63, #c0392b);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.35);
+}
+
+.karriere-sidebar__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(192, 57, 43, 0.5);
+}
+
+.karriere-sidebar__btn--outline {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.karriere-sidebar__btn--outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+/* ============================================
+     RESPONSIVE
+     ============================================ */
+@media (max-width: 1024px) {
+  .karriere-main__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .karriere-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .karriere-benefits {
+    grid-template-columns: 1fr;
+  }
+}

@@ -115,6 +115,9 @@ export default function Navbar() {
           <NavLink to="/kontakt" className="navbar__link">
             Kontakt
           </NavLink>
+          <NavLink to="/karriere" className="navbar__link">
+            Karriere
+          </NavLink>
         </nav>
 
         {/* CTA */}
@@ -221,7 +224,9 @@ export default function Navbar() {
           onClick={closeMobile}>
           Kontakt
         </NavLink>
-
+        <NavLink to="/karriere" className="navbar__link">
+          Karriere
+        </NavLink>
         <NavLink
           to="/kontakt"
           className="navbar__mobile-cta"

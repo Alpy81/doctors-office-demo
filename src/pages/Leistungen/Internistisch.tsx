@@ -9,7 +9,6 @@ import {
   ShieldCheck,
   Scan,
   CalendarCheck,
-  Phone,
   ArrowRight,
   ChevronRight,
 } from "lucide-react";
@@ -126,12 +125,6 @@ export default function Internistisch() {
                   <CalendarCheck size={17} />
                   Jetzt Termin buchen
                 </NavLink>
-                <a
-                  href="tel:+4969412430"
-                  className="leistung-sidebar__btn leistung-sidebar__btn--outline">
-                  <Phone size={17} />
-                  Anrufen
-                </a>
               </div>
 
               {/* Weitere Leistungen */}
