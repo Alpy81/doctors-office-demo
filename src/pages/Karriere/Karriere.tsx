@@ -10,7 +10,6 @@ import {
   Mail,
   ChevronRight,
   Briefcase,
-  CalendarCheck,
   Send,
 } from "lucide-react";
 import "./Karriere.css";
@@ -183,26 +182,6 @@ export default function Karriere() {
                   <Mail size={17} />
                   Jetzt bewerben
                 </button>
-              </div>
-
-              {/* Kontakt Card */}
-              <div className="karriere-sidebar__card">
-                <h3 className="karriere-sidebar__title">Haben Sie Fragen?</h3>
-                <p className="karriere-sidebar__text">
-                  Wir beantworten Ihre Fragen gerne persönlich — über unser
-                  Kontaktformular.
-                </p>
-                <NavLink
-                  to="/kontakt"
-                  className="karriere-sidebar__btn"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, var(--color-primary), var(--color-primary-light))",
-                    boxShadow: "0 6px 20px rgba(26, 58, 107, 0.30)",
-                  }}>
-                  <CalendarCheck size={17} />
-                  Zum Kontaktformular
-                </NavLink>
               </div>
             </aside>
           </div>
