@@ -224,7 +224,10 @@ export default function Navbar() {
           onClick={closeMobile}>
           Kontakt
         </NavLink>
-        <NavLink to="/karriere" className="navbar__link">
+        <NavLink
+          to="/karriere"
+          className="navbar__mobile-link"
+          onClick={closeMobile}>
           Karriere
         </NavLink>
         <NavLink
