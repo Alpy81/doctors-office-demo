@@ -3,7 +3,7 @@ export const ANNOUNCEMENTS = {
     active: true,
     title: "Urlaubsbedingte Schließung",
     message:
-      "Unsere Praxis ist vom XX. bis XX. XXXX 2025 geschlossen. Ab dem XX. XXXX sind wir wieder für Sie da. In dringenden Fällen wenden Sie sich bitte an den ärztlichen Bereitschaftsdienst unter 116 117.",
+      "Unsere Praxis ist vom 23.05. bis 31.05.2026 geschlossen. Ab dem 01.06.2026 sind wir wieder für Sie da. In dringenden Fällen wenden Sie sich bitte an den ärztlichen Bereitschaftsdienst unter 116 117.",
     icon: "🌴",
   },
 };
