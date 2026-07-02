@@ -198,8 +198,9 @@
   padding: var(--space-sm);
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-base), transform var(--transition-base);
-  z-index: 100;
+  transition: opacity var(--transition-base),
+              transform var(--transition-base);
+  z-index: 9999;
 }
 
 .navbar__dropdown-menu::before {

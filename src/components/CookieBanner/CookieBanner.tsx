@@ -10,7 +10,7 @@ export default function CookieBanner({ onAccept, onDecline }: Props) {
   return (
     <div className="cookie-banner">
       <div className="cookie-banner__inner">
-        <span className="cookie-banner__icon">🍪</span>
+        <span className="cookie-banner__icon"></span>
 
         <div className="cookie-banner__text">
           <h3 className="cookie-banner__title">Wir verwenden Cookies</h3>
