@@ -215,7 +215,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: var(--space-xs);
+  margin-top: var(--space-lg);
   padding: 13px 28px;
   background: linear-gradient(135deg, #ed8c63, #c0392b);
   color: var(--color-white);
@@ -245,5 +245,10 @@
 
   .kontakt-preview__divider {
     display: none;
+  }
+
+  .kontakt-preview__cta {
+    align-self: center;
+    margin-inline: auto;
   }
 }

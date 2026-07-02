@@ -245,6 +245,11 @@
   .why-us__images {
     height: clamp(320px, 70vw, 480px);
   }
+
+   .why-us__cta {
+    align-self: center;
+    margin-inline: auto;
+  }
 }
 
 @media (max-width: 600px) {

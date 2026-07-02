@@ -235,9 +235,11 @@
   font-weight: 600;
   cursor: pointer;
   transition: transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+              box-shadow var(--transition-fast);
   box-shadow: 0 6px 20px rgba(192, 57, 43, 0.35);
   width: fit-content;
+  align-self: center;
+  margin-inline: auto;
 }
 
 .kontakt-form__submit:hover {
