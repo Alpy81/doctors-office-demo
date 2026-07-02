@@ -13,11 +13,11 @@
   background: transparent;
   transition: background var(--transition-base),
     box-shadow var(--transition-base), height var(--transition-base);
+    overflow: visible;
 }
 
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(12px);
   box-shadow: var(--shadow-md);
   height: 68px;
 }
@@ -31,6 +31,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
+  overflow: visible;
 }
 
 /* ── Logo ── */
@@ -93,6 +94,7 @@
   display: flex;
   align-items: center;
   gap: clamp(1rem, 2.5vw, 2.5rem);
+  overflow: visible;
 }
 
 .navbar__link {
@@ -133,6 +135,7 @@
 /* ── Dropdown ── */
 .navbar__dropdown {
   position: relative;
+  overflow: visible;
 }
 
 .navbar__dropdown-trigger {
