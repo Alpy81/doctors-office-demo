@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { CalendarCheck, Activity } from "lucide-react";
+import { Activity } from "lucide-react";
 import "./Hero.css";
 import praxisteam from "../../assets/images/praxisteam.jpg";
 import arztUndAerztin from "../../assets/images/arzt-und-aerztin.jpg";
@@ -51,10 +51,6 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="hero__actions">
-            <NavLink to="/kontakt" className="hero__btn hero__btn--primary">
-              <CalendarCheck size={18} />
-              Termin vereinbaren
-            </NavLink>
             <NavLink
               to="/leistungen/diabetologie"
               className="hero__btn hero__btn--outline">
