@@ -1,29 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import { Users, ChevronRight, User } from 'lucide-react'
+import { Users, ChevronRight, User, UserPlus } from 'lucide-react'
 import './Vita.css'
-
-const teamMembers = [
-  {
-    name: 'Nawel Chiali',
-    role: 'Teamleitung MFA · Diabetesberatung',
-    extra: 'Diabetesberaterin DDG — M.Sc. Ernährungswissenschaften, Master Gesundheitswissenschaften, Bachelor Biologie (Zellbiologie und Genetik)',
-  },
-  {
-    name: 'Diana Masalchi',
-    role: 'Medizinische Fachangestellte (in Ausbildung)',
-    extra: 'Stellvertretende Teamleitung Medizinische Fachangestellte',
-  },
-  {
-    name: 'Karolina Paula',
-    role: 'Medizinische Fachangestellte',
-    extra: '',
-  },
-  {
-    name: 'Nelja Zgodic',
-    role: 'Medizinische Fachangestellte',
-    extra: 'Derzeit in Elternzeit',
-  },
-]
 
 export default function Vita() {
   return (
@@ -60,48 +37,139 @@ export default function Vita() {
       <section className="team-page-main">
         <div className="container">
 
-          {/* Arzt Feature Card */}
-          <div className="team-page-doctor">
-            <div className="team-page-doctor__image">
-              <div className="team-page-doctor__image-placeholder">
-                <User size={44} />
+          {/* ── Arzt ── */}
+          <div className="team-page-section">
+            <span className="team-page-eyebrow">Arzt</span>
+            <div className="team-page-doctor">
+              <div className="team-page-doctor__image">
+                <div className="team-page-doctor__image-placeholder">
+                  <User size={44} />
+                </div>
               </div>
-            </div>
-            <div className="team-page-doctor__body">
-              <span className="team-page-doctor__role">Arzt · Praxisleitung</span>
-              <h2 className="team-page-doctor__name">
-                Dr. med. Fayçal Chadli
-              </h2>
-              <div className="team-page-doctor__tags">
-                <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
-                <span className="team-page-doctor__tag">Diabetologe DDG/LAK</span>
-                <span className="team-page-doctor__tag">Hypertensiologe DHL</span>
-                <span className="team-page-doctor__tag">Adiposiologe DAG/DDG</span>
-                <span className="team-page-doctor__tag">Notarzt</span>
-                <span className="team-page-doctor__tag">Praxismanagement</span>
+              <div className="team-page-doctor__body">
+                <span className="team-page-doctor__role">Praxisleitung</span>
+                <h2 className="team-page-doctor__name">
+                  Dr. med. Faycal Chadli
+                </h2>
+                <div className="team-page-doctor__tags">
+                  <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
+                  <span className="team-page-doctor__tag">Diabetologe DDG/LAK</span>
+                  <span className="team-page-doctor__tag">Hypertensiologe DHL</span>
+                  <span className="team-page-doctor__tag">Adiposiologe DAG/DDG</span>
+                  <span className="team-page-doctor__tag">Notarzt</span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Team Grid */}
-          <h2 className="team-page-section-title">Unser Praxisteam</h2>
-          <div className="team-page-grid">
-            {teamMembers.map((member, i) => (
-              <div className="team-page-card" key={i}>
+          {/* ── Praxismanagement ── */}
+          <div className="team-page-section">
+            <span className="team-page-eyebrow">Praxismanagement</span>
+            <h2 className="team-page-section-title">Organisation & Leitung</h2>
+            <div className="team-page-grid team-page-grid--one">
+              <div className="team-page-card">
                 <div className="team-page-card__image">
                   <div className="team-page-card__image-placeholder">
                     <User size={32} />
                   </div>
                 </div>
                 <div className="team-page-card__body">
-                  <span className="team-page-card__role">{member.role}</span>
-                  <h3 className="team-page-card__name">{member.name}</h3>
-                  {member.extra && (
-                    <p className="team-page-card__extra">{member.extra}</p>
-                  )}
+                  <span className="team-page-card__role">Teamleitung Medizinische Fachangestellte</span>
+                  <h3 className="team-page-card__name">Nawel Chiali</h3>
                 </div>
               </div>
-            ))}
+            </div>
+          </div>
+
+          {/* ── Diabetesberatung ── */}
+          <div className="team-page-section">
+            <span className="team-page-eyebrow">Diabetesberatung</span>
+            <h2 className="team-page-section-title">Beratung & Schulung</h2>
+            <div className="team-page-grid team-page-grid--two">
+              <div className="team-page-card">
+                <div className="team-page-card__image">
+                  <div className="team-page-card__image-placeholder">
+                    <User size={32} />
+                  </div>
+                </div>
+                <div className="team-page-card__body">
+                  <span className="team-page-card__role">Diabetesberaterin DDG</span>
+                  <h3 className="team-page-card__name">Nawel Chiali</h3>
+                  <span className="team-page-card__extra-title">Akademischer Hintergrund</span>
+                  <div className="team-page-card__extra-list">
+                    <span>M.Sc. Ernährungswissenschaften</span>
+                    <span>Master Gesundheitswissenschaften</span>
+                    <span>Bachelor Biologie (Zellbiologie und Genetik)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Platzhalter — offene Stelle */}
+              <div className="team-page-card team-page-card--vacant">
+                <div className="team-page-card__image">
+                  <div className="team-page-card__image-placeholder">
+                    <UserPlus size={32} />
+                  </div>
+                </div>
+                <div className="team-page-card__body">
+                  <span className="team-page-card__role">Diabetesberatung</span>
+                  <h3 className="team-page-card__name">Wir wachsen weiter</h3>
+                  <span className="team-page-card__vacant-badge">
+                    <UserPlus size={14} />
+                    Verstärkung gesucht
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Medizinische Fachangestellte ── */}
+          <div className="team-page-section">
+            <span className="team-page-eyebrow">Medizinische Fachangestellte</span>
+            <h2 className="team-page-section-title">Unser Praxisteam</h2>
+            <div className="team-page-grid">
+              <div className="team-page-card">
+                <div className="team-page-card__image">
+                  <div className="team-page-card__image-placeholder">
+                    <User size={32} />
+                  </div>
+                </div>
+                <div className="team-page-card__body">
+                  <span className="team-page-card__role">Medizinische Fachangestellte (in Ausbildung)</span>
+                  <h3 className="team-page-card__name">Diana Masalchi</h3>
+                  <p className="team-page-card__extra">
+                    Stellvertretende Teamleitung Medizinische Fachangestellte
+                  </p>
+                </div>
+              </div>
+
+              <div className="team-page-card">
+                <div className="team-page-card__image">
+                  <div className="team-page-card__image-placeholder">
+                    <User size={32} />
+                  </div>
+                </div>
+                <div className="team-page-card__body">
+                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
+                  <h3 className="team-page-card__name">Karolina Paula</h3>
+                </div>
+              </div>
+
+              <div className="team-page-card">
+                <div className="team-page-card__image">
+                  <div className="team-page-card__image-placeholder">
+                    <User size={32} />
+                  </div>
+                </div>
+                <div className="team-page-card__body">
+                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
+                  <h3 className="team-page-card__name">Nelja Zgodic</h3>
+                  <p className="team-page-card__extra">
+                    Derzeit in Elternzeit
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>

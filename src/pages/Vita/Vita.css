@@ -128,6 +128,49 @@
   background: var(--color-bg);
 }
 
+/* ── Section Wrapper ── */
+.team-page-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.team-page-section:last-child {
+  margin-bottom: 0;
+}
+
+.team-page-eyebrow {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(74, 184, 216, 0.12);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.team-page-section-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.team-page-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  border-radius: var(--radius-full);
+}
+
 /* ── Arzt Feature Card ── */
 .team-page-doctor {
   background: var(--color-white);
@@ -136,7 +179,6 @@
   display: grid;
   grid-template-columns: 320px 1fr;
   overflow: hidden;
-  margin-bottom: var(--space-2xl);
   transition: transform var(--transition-base),
               box-shadow var(--transition-base);
 }
@@ -206,33 +248,20 @@
   font-weight: 500;
 }
 
-/* ── Section Title ── */
-.team-page-section-title {
-  font-family: var(--font-heading);
-  font-size: var(--fs-lg);
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: var(--space-lg);
-  position: relative;
-  padding-bottom: var(--space-sm);
-}
-
-.team-page-section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 48px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
-  border-radius: var(--radius-full);
-}
-
 /* ── Team Grid ── */
 .team-page-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
+}
+
+.team-page-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.team-page-grid--one {
+  grid-template-columns: 1fr;
+  max-width: 420px;
 }
 
 .team-page-card {
@@ -300,6 +329,71 @@
   margin-top: 4px;
 }
 
+.team-page-card__extra-title {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 8px;
+}
+
+.team-page-card__extra-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.team-page-card__extra-list span {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  line-height: 1.6;
+  padding-left: 12px;
+  position: relative;
+}
+
+.team-page-card__extra-list span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+/* ── Vacant / Search Card ── */
+.team-page-card--vacant {
+  border: 2px dashed rgba(74, 184, 216, 0.35);
+  box-shadow: none;
+  background: rgba(74, 184, 216, 0.03);
+}
+
+.team-page-card--vacant:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--color-secondary);
+}
+
+.team-page-card--vacant .team-page-card__image {
+  background: transparent;
+}
+
+.team-page-card--vacant .team-page-card__image-placeholder {
+  background: rgba(74, 184, 216, 0.10);
+  border: 1.5px dashed rgba(74, 184, 216, 0.40);
+}
+
+.team-page-card__vacant-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-top: 6px;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -315,10 +409,16 @@
   .team-page-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .team-page-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
-  .team-page-grid {
+  .team-page-grid,
+  .team-page-grid--two,
+  .team-page-grid--one {
     grid-template-columns: 1fr;
     max-width: 400px;
     margin-inline: auto;
