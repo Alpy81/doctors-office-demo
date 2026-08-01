@@ -23,7 +23,10 @@ const leistungen = [
 const diabetologie = [
   { label: "Diabetologie", path: "/leistungen/diabetologie" },
   { label: "DMP-Programme", path: "/leistungen/dmp" },
-  { label: "Schulungen & Ernährungsberatung", path: "/leistungen/schulungen" },
+];
+const schulungen = [
+  { label: "Diabetes-Schulungen", path: "/leistungen/schulungen-diabetes" },
+  { label: "Hypertonie-Schulungen", path: "/leistungen/schulungen-hypertonie" },
 ];
 
 export default function Navbar() {
@@ -31,6 +34,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [accordionOpen, setAccordionOpen] = useState(false);
   const [diabetologieOpen, setDiabetologieOpen] = useState(false);
+  const [schulungenOpen, setSchulungenOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -100,6 +104,23 @@ export default function Navbar() {
             </button>
             <div className="navbar__dropdown-menu">
               {diabetologie.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className="navbar__dropdown-item">
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        {/* Schulungen Dropdown */}
+          <div className="navbar__dropdown">
+            <button className="navbar__dropdown-trigger">
+              Schulungen
+              <ChevronDown className="navbar__dropdown-icon" size={16} />
+            </button>
+            <div className="navbar__dropdown-menu">
+              {schulungen.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
@@ -195,6 +216,39 @@ export default function Navbar() {
           {diabetologieOpen && (
             <div className="navbar__mobile-accordion-items">
               {diabetologie.map((item) => (
+                <button
+                  key={item.path}
+                  className="navbar__mobile-accordion-item"
+                  onClick={() => handleDropdownItemClick(item.path)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    textAlign: "left",
+                    cursor: "pointer",
+                    width: "100%",
+                  }}>
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+    <div className="navbar__mobile-accordion">
+          <button
+            className="navbar__mobile-accordion-trigger"
+            onClick={() => setSchulungenOpen(!schulungenOpen)}>
+            Schulungen
+            <ChevronDown
+              size={18}
+              style={{
+                transform: schulungenOpen ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </button>
+          {schulungenOpen && (
+            <div className="navbar__mobile-accordion-items">
+              {schulungen.map((item) => (
                 <button
                   key={item.path}
                   className="navbar__mobile-accordion-item"

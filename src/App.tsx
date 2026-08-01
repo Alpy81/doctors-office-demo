@@ -10,7 +10,6 @@ import Home from "./pages/Home";
 import Hausaerztlich from "./pages/Leistungen/Hausaerztlich";
 import Internistisch from "./pages/Leistungen/Internistisch";
 import Diabetologie from "./pages/Leistungen/Diabetologie";
-import Schulungen from "./pages/Leistungen/Schulungen";
 import Vorsorge from "./pages/Leistungen/Vorsorge";
 import Impfungen from "./pages/Leistungen/Impfungen";
 import Psychosomatik from "./pages/Leistungen/Psychosomatik";
@@ -21,6 +20,8 @@ import Vita from "./pages/Vita/Vita";
 import Praxis from "./pages/Praxis/Praxis";
 import Kontakt from "./pages/Kontakt/Kontakt";
 import Karriere from "./pages/Karriere/Karriere";
+import SchulungenDiabetes from './pages/Leistungen/SchulungenDiabetes'
+import SchulungenHypertonie from './pages/Leistungen/SchulungenHypertonie'
 
 function App() {
   const [cookieAccepted, setCookieAccepted] = useState<boolean | null>(() => {
@@ -64,7 +65,8 @@ function App() {
         <Route path="/leistungen/hausaerztlich" element={<Hausaerztlich />} />
         <Route path="/leistungen/internistisch" element={<Internistisch />} />
         <Route path="/leistungen/diabetologie" element={<Diabetologie />} />
-        <Route path="/leistungen/schulungen" element={<Schulungen />} />
+        <Route path="/leistungen/schulungen-diabetes" element={<SchulungenDiabetes />} />
+        <Route path="/leistungen/schulungen-hypertonie" element={<SchulungenHypertonie />} />
         <Route path="/leistungen/vorsorge" element={<Vorsorge />} />
         <Route path="/leistungen/impfungen" element={<Impfungen />} />
         <Route path="/leistungen/psychosomatik" element={<Psychosomatik />} />

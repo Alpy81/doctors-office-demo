@@ -342,6 +342,67 @@
   flex-shrink: 0;
 }
 
+/* ── Schulungsprogramme ── */
+.leistung-programs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.leistung-program {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  transition: border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.leistung-program:hover {
+  border-color: var(--color-neutral-light);
+  box-shadow: var(--shadow-md);
+}
+
+.leistung-program__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.leistung-program__audience {
+  font-size: var(--fs-sm);
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.leistung-program__points {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.leistung-program__point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.leistung-program__point-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
 /* ============================================
      RESPONSIVE
      ============================================ */

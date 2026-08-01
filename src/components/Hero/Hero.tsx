@@ -47,23 +47,7 @@ export default function Hero() {
             einem Team, das Sie kennt.
           </p>
 
-          {/* Statistiken */}
-          <div className="hero__stats">
-            <div className="hero__stat">
-              <span className="hero__stat-number">15+</span>
-              <span className="hero__stat-label">Jahre Erfahrung</span>
-            </div>
-            <div className="hero__stat-divider" />
-            <div className="hero__stat">
-              <span className="hero__stat-number">10+</span>
-              <span className="hero__stat-label">Leistungen</span>
-            </div>
-            <div className="hero__stat-divider" />
-            <div className="hero__stat">
-              <span className="hero__stat-number">∞</span>
-              <span className="hero__stat-label">Fürsorge</span>
-            </div>
-          </div>
+          
 
           {/* Buttons */}
           <div className="hero__actions">

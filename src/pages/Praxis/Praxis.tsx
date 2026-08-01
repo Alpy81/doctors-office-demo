@@ -16,7 +16,7 @@ import sprechzimmer from "../../assets/images/sprechzimmer.jpg";
 
 const stats = [
   { number: "2025", label: "Praxiseröffnung" },
-  { number: "2", label: "Ärzte" },
+  { number: "15", label: "Jahre Erfahrung" },
   { number: "10+", label: "Leistungen" },
   { number: "100%", label: "Engagement für Sie" },
 ];
