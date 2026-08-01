@@ -49,7 +49,7 @@ export default function Vita() {
     <div className="team-page-doctor__body">
       <span className="team-page-doctor__role">Arzt & Praxisinhaber</span>
       <h2 className="team-page-doctor__name">
-       Heur docteur en médecine Faycal Chadli
+       Herr docteur en médecine Fayçal Chadli
       </h2>
       <div className="team-page-doctor__tags">
         <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
