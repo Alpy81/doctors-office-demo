@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import {
-  Users,
-  Award,
-  Clock,
   HeartHandshake,
+  Stethoscope,
+  Droplets,
+  ShieldCheck,
   ChevronRight,
   Building2,
 } from "lucide-react";
@@ -32,6 +32,29 @@ const raeume = [
   },
 ];
 
+const philosophie = [
+  {
+    icon: <HeartHandshake size={22} />,
+    title: "Persönliche Betreuung",
+    text: "Wir nehmen uns Zeit für Ihre Fragen und begleiten Sie individuell und langfristig.",
+  },
+  {
+    icon: <Stethoscope size={22} />,
+    title: "Moderne Diagnostik",
+    text: "Zeitgemäße Untersuchungsverfahren ermöglichen eine präzise Diagnostik und optimale Therapie.",
+  },
+  {
+    icon: <Droplets size={22} />,
+    title: "Diabetologie & Prävention",
+    text: "Spezialisierte Betreuung bei Diabetes sowie strukturierte Schulungs- und DMP-Programme.",
+  },
+  {
+    icon: <ShieldCheck size={22} />,
+    title: "Hausärztliche Versorgung",
+    text: "Von Vorsorge und Impfungen bis zur Behandlung chronischer Erkrankungen — alles unter einem Dach.",
+  },
+];
+
 export default function Praxis() {
   return (
     <>
@@ -53,25 +76,25 @@ export default function Praxis() {
           </div>
           <div className="praxis-hero__tag">
             <Building2 size={14} />
-            Über unsere Praxis
+            Innere Medizin · Diabetologie · Hausärztliche Versorgung · Notfallmedizin
           </div>
           <h1 className="praxis-hero__title">
-            Willkommen in der Praxis Docteur en Medicine/Univ. Oran Faycal
-            Chadli
+            Willkommen in der Praxis Chadli in Frankfurt-Fechenheim
           </h1>
           <p className="praxis-hero__subtitle">
-            Eine neue Praxis mit einem klaren Ziel: Medizin, die den Menschen in
-            den Mittelpunkt stellt. Hier verbinden sich Fachkompetenz,
-            Leidenschaft und persönliche Fürsorge — für Ihre Gesundheit und Ihr
-            Wohlbefinden.
+            Wir verbinden moderne internistische Medizin mit persönlicher und
+            vertrauensvoller Betreuung. Unser Ziel ist es, Patientinnen und
+            Patienten in jeder Lebensphase kompetent, verständlich und
+            langfristig zu begleiten.
           </p>
         </div>
       </section>
 
-      {/* Über uns */}
+      {/* Unsere Philosophie */}
       <section className="praxis-about">
         <div className="container">
           <div className="praxis-about__inner">
+
             {/* Bilder */}
             <div className="praxis-about__images">
               <div className="praxis-about__img-main">
@@ -84,29 +107,21 @@ export default function Praxis() {
 
             {/* Text */}
             <div className="praxis-about__content">
-              <span className="praxis-about__tag">Unsere Geschichte</span>
+              <span className="praxis-about__tag">Unsere Philosophie</span>
               <h2 className="praxis-about__title">
-                Medizin mit <span>Herz & Kompetenz</span>
+                Medizin mit <span>Kompetenz.</span> Zeit für Menschen.
               </h2>
               <p className="praxis-about__text">
-                Unsere Praxis ist eine neue, modern ausgestattete
-                Gemeinschaftspraxis in Frankfurt am Main, die Dr. Faycal Mahmoud
-                Chadli gemeinsam mit seiner Frau führt. Als Facharzt für Innere
-                Medizin, zertifizierter Diabetologe DDG, Hypertensiologe DHL und
-                Adiposiologe bringt Dr. Chadli über 15 Jahre klinische Erfahrung
-                aus renommierten Kliniken in Deutschland und Frankreich mit.
+                Ob Vorsorgeuntersuchung, Behandlung akuter Beschwerden oder
+                Betreuung chronischer Erkrankungen — wir nehmen uns Zeit für
+                Ihre individuellen Anliegen und entwickeln gemeinsam mit Ihnen
+                die passende Therapie.
               </p>
               <p className="praxis-about__text">
-                Wir stehen für eine Medizin, die zuhört. Wir nehmen uns Zeit für
-                Sie — für Ihre Fragen, Ihre Sorgen und Ihre Gesundheitsziele.
-                Dabei verbinden wir modernste Diagnostik und Therapie mit
-                menschlicher Wärme und einem offenen Ohr.
-              </p>
-              <p className="praxis-about__text">
-                Von der hausärztlichen Grundversorgung über spezialisierte
-                Diabetologie bis hin zu DMP-Programmen und individuellen
-                Vorsorgeuntersuchungen — wir sind Ihre erste Anlaufstelle für
-                alle gesundheitlichen Anliegen.
+                Durch moderne Diagnostik, leitliniengerechte Medizin und eine
+                enge Zusammenarbeit mit Fachärztinnen und Fachärzten bieten
+                wir Ihnen eine umfassende medizinische Versorgung aus einer
+                Hand.
               </p>
 
               {/* Feature Icons */}
@@ -117,24 +132,7 @@ export default function Praxis() {
                   gap: "1rem",
                   marginTop: "0.5rem",
                 }}>
-                {[
-                  {
-                    icon: <Award size={20} />,
-                    text: "Zertifizierte Fachkompetenz in Diabetologie, Hypertonie & Adipositas",
-                  },
-                  {
-                    icon: <HeartHandshake size={20} />,
-                    text: "Persönliche & empathische Betreuung — jeder Patient ist einzigartig",
-                  },
-                  {
-                    icon: <Users size={20} />,
-                    text: "Arztehepaar mit Leidenschaft und einem eingespielten Team",
-                  },
-                  {
-                    icon: <Clock size={20} />,
-                    text: "Moderne Ausstattung und kurze Wartezeiten",
-                  },
-                ].map((f, i) => (
+                {philosophie.map((f, i) => (
                   <div
                     key={i}
                     style={{
@@ -156,15 +154,26 @@ export default function Praxis() {
                       }}>
                       {f.icon}
                     </div>
-                    <span
-                      style={{
-                        fontSize: "var(--fs-sm)",
-                        color: "var(--color-text-light)",
-                        lineHeight: 1.7,
-                        paddingTop: "10px",
-                      }}>
-                      {f.text}
-                    </span>
+                    <div style={{ paddingTop: "6px" }}>
+                      <h3
+                        style={{
+                          fontFamily: "var(--font-heading)",
+                          fontSize: "var(--fs-sm)",
+                          fontWeight: 700,
+                          color: "var(--color-primary)",
+                          marginBottom: "3px",
+                        }}>
+                        {f.title}
+                      </h3>
+                      <span
+                        style={{
+                          fontSize: "var(--fs-sm)",
+                          color: "var(--color-text-light)",
+                          lineHeight: 1.7,
+                        }}>
+                        {f.text}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -191,7 +200,7 @@ export default function Praxis() {
               marginBottom: "var(--space-sm)",
               lineHeight: 1.4,
             }}>
-            Lernen Sie Docteur en Medicine/Univ. Oran Faycal Chadli näher kennen
+            Lernen Sie unser Team näher kennen
           </p>
           <p
             style={{
@@ -203,8 +212,8 @@ export default function Praxis() {
               marginInline: "auto",
             }}>
             Über 15 Jahre klinische Erfahrung, mehrfache Fachzertifizierungen
-            und eine Leidenschaft für seine Patienten — erfahren Sie mehr über
-            seinen Werdegang.
+            und ein engagiertes Praxisteam — erfahren Sie mehr über die
+            Menschen hinter der Praxis Chadli.
           </p>
           <NavLink
             to="/vita"
@@ -221,7 +230,7 @@ export default function Praxis() {
               textDecoration: "none",
               boxShadow: "0 6px 20px rgba(192, 57, 43, 0.40)",
             }}>
-            Vita des Arztes entdecken →
+            Unser Team entdecken →
           </NavLink>
         </div>
       </section>
