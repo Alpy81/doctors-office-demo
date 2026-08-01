@@ -264,7 +264,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 22px;
-  background: linear-gradient(135deg, #87dbfa, #16edf5);
+  background: linear-gradient(135deg, #7dd4ed, #4ab8d8, #2980b9);
   color: var(--color-white);
   border-radius: var(--radius-full);
   font-size: var(--fs-sm);
@@ -273,12 +273,12 @@
   white-space: nowrap;
   transition: transform var(--transition-fast),
     box-shadow var(--transition-fast);
-  box-shadow: 0 4px 16px rgba(43, 192, 192, 0.35);
+  box-shadow: 0 4px 16px rgba(74, 184, 216, 0.40);
 }
 
 .navbar__cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(43, 192, 192, 0.35);
+  box-shadow: 0 8px 24px rgba(74, 184, 216, 0.55);
 }
 
 /* ── Mobile Burger ── */
