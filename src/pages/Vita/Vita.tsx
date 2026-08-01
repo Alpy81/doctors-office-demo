@@ -37,30 +37,30 @@ export default function Vita() {
       <section className="team-page-main">
         <div className="container">
 
-          {/* ── Arzt ── */}
-          <div className="team-page-section">
-            <span className="team-page-eyebrow">Arzt & PRAXISINHABER</span>
-            <div className="team-page-doctor">
-              <div className="team-page-doctor__image">
-                <div className="team-page-doctor__image-placeholder">
-                  <User size={44} />
-                </div>
-              </div>
-              <div className="team-page-doctor__body">
-                
-                <h2 className="team-page-doctor__name">
-                  Fayçal Chadli
-                </h2>
-                <div className="team-page-doctor__tags">
-                  <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
-                  <span className="team-page-doctor__tag">Diabetologe DDG/LAK</span>
-                  <span className="team-page-doctor__tag">Hypertensiologe DHL</span>
-                  <span className="team-page-doctor__tag">Adiposiologe DAG/DDG</span>
-                  <span className="team-page-doctor__tag">Notarzt</span>
-                </div>
-              </div>
-            </div>
-          </div>
+         {/* ── Arzt ── */}
+<div className="team-page-section">
+  <h2 className="team-page-section-title">Unser Praxisteam</h2>
+  <div className="team-page-doctor">
+    <div className="team-page-doctor__image">
+      <div className="team-page-doctor__image-placeholder">
+        <User size={44} />
+      </div>
+    </div>
+    <div className="team-page-doctor__body">
+      <span className="team-page-doctor__role">Arzt & Praxisinhaber</span>
+      <h2 className="team-page-doctor__name">
+       Heur docteur en médecine Faycal Chadli
+      </h2>
+      <div className="team-page-doctor__tags">
+        <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
+        <span className="team-page-doctor__tag">Diabetologe DDG/LAK</span>
+        <span className="team-page-doctor__tag">Hypertensiologe DHL</span>
+        <span className="team-page-doctor__tag">Adiposiologe DAG/DDG</span>
+        <span className="team-page-doctor__tag">Notarzt</span>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* ── Praxismanagement ── */}
           <div className="team-page-section">
@@ -74,8 +74,9 @@ export default function Vita() {
                   </div>
                 </div>
                 <div className="team-page-card__body">
+                   <h3 className="team-page-card__name">Nawel Chiali</h3>
                   <span className="team-page-card__role">Teamleitung Medizinische Fachangestellte</span>
-                  <h3 className="team-page-card__name">Nawel Chiali</h3>
+                 
                 </div>
               </div>
             </div>
@@ -126,7 +127,7 @@ export default function Vita() {
           {/* ── Medizinische Fachangestellte ── */}
           <div className="team-page-section">
             <span className="team-page-eyebrow">Medizinische Fachangestellte</span>
-            <h2 className="team-page-section-title">Unser Praxisteam</h2>
+            
             <div className="team-page-grid">
               <div className="team-page-card">
                 <div className="team-page-card__image">
@@ -135,8 +136,8 @@ export default function Vita() {
                   </div>
                 </div>
                 <div className="team-page-card__body">
-                  <span className="team-page-card__role">Medizinische Fachangestellte (in Ausbildung)</span>
                   <h3 className="team-page-card__name">Diana Masalchi</h3>
+                  <span className="team-page-card__role">Medizinische Fachangestellte (in Ausbildung)</span>
                   <p className="team-page-card__extra">
                     Stellvertretende Teamleitung Medizinische Fachangestellte
                   </p>
@@ -150,8 +151,8 @@ export default function Vita() {
                   </div>
                 </div>
                 <div className="team-page-card__body">
-                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
                   <h3 className="team-page-card__name">Karolina Paula</h3>
+                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
                 </div>
               </div>
 
@@ -162,8 +163,8 @@ export default function Vita() {
                   </div>
                 </div>
                 <div className="team-page-card__body">
-                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
                   <h3 className="team-page-card__name">Nelja Zgodic</h3>
+                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
                   <p className="team-page-card__extra">
                     Derzeit in Elternzeit
                   </p>

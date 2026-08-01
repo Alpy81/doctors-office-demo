@@ -108,9 +108,9 @@ export default function Praxis() {
             {/* Text */}
             <div className="praxis-about__content">
               <span className="praxis-about__tag">Unsere Philosophie</span>
-              <h2 className="praxis-about__title">
-                Medizin mit <span>Kompetenz.</span> Zeit für Menschen.
-              </h2>
+            <h2 className="praxis-about__title">Medizin mit Kompetenz. 
+              <span>Zeit für Menschen.</span>
+            </h2>
               <p className="praxis-about__text">
                 Ob Vorsorgeuntersuchung, Behandlung akuter Beschwerden oder
                 Betreuung chronischer Erkrankungen — wir nehmen uns Zeit für

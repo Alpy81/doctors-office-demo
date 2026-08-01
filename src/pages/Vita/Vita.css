@@ -219,11 +219,20 @@
 }
 
 .team-page-doctor__role {
-  font-size: var(--fs-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 6px 16px;
+  background: rgba(74, 184, 216, 0.12);
+  border: 1px solid rgba(74, 184, 216, 0.30);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--color-secondary);
-  letter-spacing: 0.10em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
 .team-page-doctor__name {
