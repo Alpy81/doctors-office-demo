@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-lg);
+  gap: clamp(var(--space-lg), 4vw, var(--space-2xl));
   overflow: visible;
 }
 
@@ -98,6 +98,8 @@
 }
 
 .navbar__link {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-body);
   font-size: var(--fs-sm);
   font-weight: 500;
@@ -105,6 +107,7 @@
   text-decoration: none;
   letter-spacing: 0.02em;
   position: relative;
+  line-height: 1;
   padding-block: 4px;
   transition: color var(--transition-fast);
   white-space: nowrap;
@@ -139,7 +142,7 @@
 }
 
 .navbar__dropdown-trigger {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
   cursor: pointer;
@@ -150,6 +153,7 @@
   font-weight: 500;
   color: var(--color-white);
   letter-spacing: 0.02em;
+  line-height: 1;
   padding-block: 4px;
   position: relative;
   transition: color var(--transition-fast);

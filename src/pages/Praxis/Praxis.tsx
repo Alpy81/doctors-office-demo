@@ -14,13 +14,6 @@ import behandlungsraum2 from "../../assets/images/behandlungsraum2.jpg";
 import tresen from "../../assets/images/tresen.jpg";
 import sprechzimmer from "../../assets/images/sprechzimmer.jpg";
 
-const stats = [
-  { number: "2025", label: "Praxiseröffnung" },
-  { number: "15", label: "Jahre Erfahrung" },
-  { number: "10+", label: "Leistungen" },
-  { number: "100%", label: "Engagement für Sie" },
-];
-
 const raeume = [
   {
     image: behandlungsraum2,
@@ -74,20 +67,6 @@ export default function Praxis() {
           </p>
         </div>
       </section>
-
-      {/* Stats Bar */}
-      <div className="praxis-stats">
-        <div className="container">
-          <div className="praxis-stats__inner">
-            {stats.map((s, i) => (
-              <div className="praxis-stats__item" key={i}>
-                <span className="praxis-stats__number">{s.number}</span>
-                <span className="praxis-stats__label">{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Über uns */}
       <section className="praxis-about">

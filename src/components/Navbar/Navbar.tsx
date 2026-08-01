@@ -131,7 +131,7 @@ export default function Navbar() {
             </div>
           </div>
           <NavLink to="/vita" className="navbar__link">
-            Vita
+            Team
           </NavLink>
           <NavLink to="/kontakt" className="navbar__link">
             Kontakt
@@ -270,7 +270,7 @@ export default function Navbar() {
           to="/vita"
           className="navbar__mobile-link"
           onClick={closeMobile}>
-          Vita
+          Team
         </NavLink>
         <NavLink
           to="/kontakt"
