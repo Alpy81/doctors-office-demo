@@ -39,7 +39,7 @@ export default function Vita() {
 
           {/* ── Arzt ── */}
           <div className="team-page-section">
-            <span className="team-page-eyebrow">Arzt</span>
+            <span className="team-page-eyebrow">Arzt & PRAXISINHABER</span>
             <div className="team-page-doctor">
               <div className="team-page-doctor__image">
                 <div className="team-page-doctor__image-placeholder">
@@ -47,7 +47,7 @@ export default function Vita() {
                 </div>
               </div>
               <div className="team-page-doctor__body">
-                <span className="team-page-doctor__role">Praxisleitung</span>
+                
                 <h2 className="team-page-doctor__name">
                   Dr. med. Faycal Chadli
                 </h2>

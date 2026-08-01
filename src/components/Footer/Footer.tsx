@@ -17,8 +17,7 @@ const leistungen = [
 
 const navigation = [
   { label: "Praxis", path: "/praxis" },
-  { label: "Vita", path: "/vita" },
-  { label: "Check-Up", path: "/check-up" },
+  { label: "Team", path: "/vita" },
   { label: "Kontakt", path: "/kontakt" },
 ];
 
