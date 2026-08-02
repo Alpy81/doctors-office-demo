@@ -163,6 +163,7 @@
   font-size: var(--fs-base);
   color: var(--color-text-light);
   line-height: 1.85;
+  margin-bottom: var(--space-md);
 }
 
 .leistung-content__section-title {
@@ -170,7 +171,7 @@
   font-size: var(--fs-lg);
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
   position: relative;
   padding-bottom: var(--space-sm);
 }
@@ -287,7 +288,7 @@
   justify-content: center;
   gap: 8px;
   padding: 13px 20px;
-  background: linear-gradient(135deg, #ed8c63, #c0392b);
+  background: linear-gradient(135deg, #7dd4ed, #4ab8d8, #2980b9);
   color: var(--color-white);
   border-radius: var(--radius-full);
   font-size: var(--fs-sm);
@@ -295,12 +296,12 @@
   text-decoration: none;
   transition: transform var(--transition-fast),
     box-shadow var(--transition-fast);
-  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.35);
+ box-shadow: 0 4px 16px rgba(74, 184, 216, 0.40);
 }
 
 .leistung-sidebar__btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(192, 57, 43, 0.5);
+   box-shadow: 0 4px 16px rgba(74, 184, 216, 0.40);
 }
 
 .leistung-sidebar__btn--outline {
