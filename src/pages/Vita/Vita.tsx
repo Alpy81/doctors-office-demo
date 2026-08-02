@@ -38,29 +38,29 @@ export default function Vita() {
         <div className="container">
 
          {/* ── Arzt ── */}
-<div className="team-page-section">
-  <h2 className="team-page-section-title">Unser Praxisteam</h2>
-  <div className="team-page-doctor">
-    <div className="team-page-doctor__image">
-      <div className="team-page-doctor__image-placeholder">
-        <User size={44} />
+      <div className="team-page-section">
+        <h2 className="team-page-section-title">Unser Praxisteam</h2>
+        <div className="team-page-doctor">
+          <div className="team-page-doctor__image">
+            <div className="team-page-doctor__image-placeholder">
+              <User size={44} />
+            </div>
+          </div>
+          <div className="team-page-doctor__body">
+            <span className="team-page-doctor__role">Arzt & Praxisinhaber</span>
+            <h2 className="team-page-doctor__name">
+            Herr docteur en médecine Fayçal Chadli
+            </h2>
+            <div className="team-page-doctor__tags">
+              <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
+              <span className="team-page-doctor__tag">Diabetologe DDG/LAK</span>
+              <span className="team-page-doctor__tag">Hypertensiologe DHL</span>
+              <span className="team-page-doctor__tag">Adiposiologe DAG/DDG</span>
+              <span className="team-page-doctor__tag">Notarzt</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="team-page-doctor__body">
-      <span className="team-page-doctor__role">Arzt & Praxisinhaber</span>
-      <h2 className="team-page-doctor__name">
-       Herr docteur en médecine Fayçal Chadli
-      </h2>
-      <div className="team-page-doctor__tags">
-        <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
-        <span className="team-page-doctor__tag">Diabetologe DDG/LAK</span>
-        <span className="team-page-doctor__tag">Hypertensiologe DHL</span>
-        <span className="team-page-doctor__tag">Adiposiologe DAG/DDG</span>
-        <span className="team-page-doctor__tag">Notarzt</span>
-      </div>
-    </div>
-  </div>
-</div>
 
           {/* ── Praxismanagement ── */}
           <div className="team-page-section">
