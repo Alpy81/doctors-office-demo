@@ -179,7 +179,7 @@
 
 .footer__bottom-copy {
   font-size: var(--fs-xs);
-  color: rgba(255, 255, 255, 0.22);
+  color: rgb(138, 229, 248);
 }
 
 .footer__bottom-links {
@@ -190,13 +190,9 @@
 
 .footer__bottom-link {
   font-size: var(--fs-xs);
-  color: rgba(255, 255, 255, 0.22);
+  color:rgb(138, 229, 248);
   text-decoration: none;
   transition: color var(--transition-fast);
-}
-
-.footer__bottom-link:hover {
-  color: var(--color-secondary);
 }
 
 /* ============================================
