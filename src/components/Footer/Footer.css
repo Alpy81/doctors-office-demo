@@ -125,7 +125,7 @@
   font-family: var(--font-body);
   font-size: var(--fs-sm);
   font-weight: 600;
-  color: var(--color-white);
+  color:rgb(138, 229, 248);
   letter-spacing: 0.02em;
   margin-bottom: 4px;
 }
