@@ -205,8 +205,10 @@
   gap: 14px;
   box-shadow: var(--shadow-sm);
   border: 1px solid transparent;
-  transition: border-color var(--transition-base),
-    box-shadow var(--transition-base), transform var(--transition-base);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 }
 
 .karriere-benefit:hover {
@@ -296,20 +298,21 @@
   justify-content: center;
   gap: 8px;
   padding: 13px 20px;
-  background: linear-gradient(135deg, #ed8c63, #c0392b);
+  background: linear-gradient(135deg, #7dd4ed, #4ab8d8, #2980b9);
   color: var(--color-white);
   border-radius: var(--radius-full);
   font-size: var(--fs-sm);
   font-weight: 600;
   text-decoration: none;
-  transition: transform var(--transition-fast),
+  transition:
+    transform var(--transition-fast),
     box-shadow var(--transition-fast);
-  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.35);
+  box-shadow: 0 4px 16px rgba(74, 184, 216, 0.4);
 }
 
 .karriere-sidebar__btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(192, 57, 43, 0.5);
+  box-shadow: 0 8px 24px rgba(74, 184, 216, 0.55);
 }
 
 .karriere-sidebar__btn--outline {
