@@ -11,9 +11,11 @@
   display: flex;
   align-items: center;
   background: transparent;
-  transition: background var(--transition-base),
-    box-shadow var(--transition-base), height var(--transition-base);
-    overflow: visible;
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base),
+    height var(--transition-base);
+  overflow: visible;
 }
 
 .navbar.scrolled {
@@ -197,17 +199,30 @@
   top: calc(100% + 4px);
   left: 50%;
   transform: translateX(-50%) translateY(-8px);
-  min-width: 280px;
-  background: var(--color-white);
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--color-neutral-light);
+  box-shadow:
+    0 20px 50px rgba(13, 33, 69, 0.18),
+    0 4px 16px rgba(74, 184, 216, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-base),
-              transform var(--transition-base);
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base);
   z-index: 9999;
+}
+
+.navbar__dropdown-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar__dropdown-menu::before {
@@ -241,15 +256,27 @@
 }
 
 .navbar__dropdown-item {
-  display: block;
-  padding: 10px var(--space-sm);
+  display: flex;
+  align-items: center;
+  padding: 11px 14px;
   font-size: var(--fs-sm);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-text);
   border-radius: var(--radius-md);
-  transition: background var(--transition-fast), color var(--transition-fast),
-    padding-left var(--transition-fast);
+  border: 1px solid transparent;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
   cursor: pointer;
+}
+
+.navbar__dropdown-item:hover {
+  background: rgba(74, 184, 216, 0.08);
+  border-color: rgba(74, 184, 216, 0.25);
+  color: var(--color-primary);
+  transform: translateX(3px);
 }
 
 .navbar__dropdown-item:hover {
@@ -271,9 +298,10 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   white-space: nowrap;
-  transition: transform var(--transition-fast),
+  transition:
+    transform var(--transition-fast),
     box-shadow var(--transition-fast);
-  box-shadow: 0 4px 16px rgba(74, 184, 216, 0.40);
+  box-shadow: 0 4px 16px rgba(74, 184, 216, 0.4);
 }
 
 .navbar__cta:hover {
@@ -298,7 +326,9 @@
   height: 2px;
   background: var(--color-white);
   border-radius: var(--radius-full);
-  transition: transform var(--transition-base), opacity var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-base);
 }
 
 .navbar.scrolled .navbar__burger span {
