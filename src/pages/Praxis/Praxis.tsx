@@ -76,7 +76,8 @@ export default function Praxis() {
           </div>
           <div className="praxis-hero__tag">
             <Building2 size={14} />
-            Innere Medizin · Diabetologie · Hausärztliche Versorgung · Notfallmedizin
+            Innere Medizin · Diabetologie · Hausärztliche Versorgung ·
+            Notfallmedizin
           </div>
           <h1 className="praxis-hero__title">
             Willkommen in der Praxis Chadli in Frankfurt-Fechenheim
@@ -94,11 +95,10 @@ export default function Praxis() {
       <section className="praxis-about">
         <div className="container">
           <div className="praxis-about__inner">
-
             {/* Bilder */}
             <div className="praxis-about__images">
               <div className="praxis-about__img-main">
-                <img src={arztUndAerztin} alt="Dr. Chadli und seine Frau" />
+                <img src={arztUndAerztin} alt="Dr. Chadli und Frau Chadli" />
               </div>
               <div className="praxis-about__img-secondary">
                 <img src={behandlungsraum2} alt="Behandlungsraum" />
@@ -108,10 +108,11 @@ export default function Praxis() {
             {/* Text */}
             <div className="praxis-about__content">
               <span className="praxis-about__tag">Unsere Philosophie</span>
-            <h2 className="praxis-about__title">Medizin mit&nbsp;Kompetenz.
-            <br />
-              <span>Zeit für Menschen.</span>
-          </h2>
+              <h2 className="praxis-about__title">
+                Medizin mit&nbsp;Kompetenz.
+                <br />
+                <span>Zeit für Menschen.</span>
+              </h2>
               <p className="praxis-about__text">
                 Ob Vorsorgeuntersuchung, Behandlung akuter Beschwerden oder
                 Betreuung chronischer Erkrankungen — wir nehmen uns Zeit für
@@ -120,9 +121,8 @@ export default function Praxis() {
               </p>
               <p className="praxis-about__text">
                 Durch moderne Diagnostik, leitliniengerechte Medizin und eine
-                enge Zusammenarbeit mit Fachärztinnen und Fachärzten bieten
-                wir Ihnen eine umfassende medizinische Versorgung aus einer
-                Hand.
+                enge Zusammenarbeit mit Fachärztinnen und Fachärzten bieten wir
+                Ihnen eine umfassende medizinische Versorgung aus einer Hand.
               </p>
 
               {/* Feature Icons */}
@@ -132,7 +132,8 @@ export default function Praxis() {
                   flexDirection: "column",
                   gap: "1rem",
                   marginTop: "0.5rem",
-                }}>
+                }}
+              >
                 {philosophie.map((f, i) => (
                   <div
                     key={i}
@@ -140,7 +141,8 @@ export default function Praxis() {
                       display: "flex",
                       alignItems: "flex-start",
                       gap: "14px",
-                    }}>
+                    }}
+                  >
                     <div
                       style={{
                         width: "42px",
@@ -152,7 +154,8 @@ export default function Praxis() {
                         alignItems: "center",
                         justifyContent: "center",
                         flexShrink: 0,
-                      }}>
+                      }}
+                    >
                       {f.icon}
                     </div>
                     <div style={{ paddingTop: "6px" }}>
@@ -163,7 +166,8 @@ export default function Praxis() {
                           fontWeight: 700,
                           color: "var(--color-primary)",
                           marginBottom: "3px",
-                        }}>
+                        }}
+                      >
                         {f.title}
                       </h3>
                       <span
@@ -171,7 +175,8 @@ export default function Praxis() {
                           fontSize: "var(--fs-sm)",
                           color: "var(--color-text-light)",
                           lineHeight: 1.7,
-                        }}>
+                        }}
+                      >
                         {f.text}
                       </span>
                     </div>
@@ -190,7 +195,8 @@ export default function Praxis() {
           background:
             "linear-gradient(135deg, #0d2145 0%, #1A3A6B 60%, #1a5276 100%)",
           textAlign: "center",
-        }}>
+        }}
+      >
         <div className="container">
           <p
             style={{
@@ -200,7 +206,8 @@ export default function Praxis() {
               color: "var(--color-white)",
               marginBottom: "var(--space-sm)",
               lineHeight: 1.4,
-            }}>
+            }}
+          >
             Lernen Sie unser Team näher kennen
           </p>
           <p
@@ -211,10 +218,11 @@ export default function Praxis() {
               lineHeight: 1.8,
               maxWidth: "520px",
               marginInline: "auto",
-            }}>
+            }}
+          >
             Über 15 Jahre klinische Erfahrung, mehrfache Fachzertifizierungen
-            und ein engagiertes Praxisteam — erfahren Sie mehr über die
-            Menschen hinter der Praxis Chadli.
+            und ein engagiertes Praxisteam — erfahren Sie mehr über die Menschen
+            hinter der Praxis Chadli.
           </p>
           <NavLink
             to="/vita"
@@ -230,7 +238,8 @@ export default function Praxis() {
               fontWeight: 600,
               textDecoration: "none",
               boxShadow: "0 6px 20px rgba(192, 57, 43, 0.40)",
-            }}>
+            }}
+          >
             Unser Team entdecken →
           </NavLink>
         </div>

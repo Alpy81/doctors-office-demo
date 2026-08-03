@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom'
-import { Users, ChevronRight, User, UserPlus } from 'lucide-react'
-import './Vita.css'
+import { NavLink } from "react-router-dom";
+import { Users, ChevronRight, User, UserPlus } from "lucide-react";
+import "./Vita.css";
 
 export default function Vita() {
   return (
@@ -26,9 +26,9 @@ export default function Vita() {
             Menschen, denen Sie vertrauen können
           </h1>
           <p className="team-page-hero__subtitle">
-            Hinter jeder guten Praxis stehen Menschen mit Leidenschaft.
-            Lernen Sie das Team der Praxis Dr. Chadli kennen — kompetent,
-            herzlich und immer für Sie da.
+            Hinter jeder guten Praxis stehen Menschen mit Leidenschaft. Lernen
+            Sie das Team der Praxis Dr. Chadli kennen — kompetent, herzlich und
+            immer für Sie da.
           </p>
         </div>
       </section>
@@ -36,31 +36,40 @@ export default function Vita() {
       {/* Main */}
       <section className="team-page-main">
         <div className="container">
-
-         {/* ── Arzt ── */}
-      <div className="team-page-section">
-        <h2 className="team-page-section-title">Unser Praxisteam</h2>
-        <div className="team-page-doctor">
-          <div className="team-page-doctor__image">
-            <div className="team-page-doctor__image-placeholder">
-              <User size={44} />
+          {/* ── Arzt ── */}
+          <div className="team-page-section">
+            <h2 className="team-page-section-title">Unser Praxisteam</h2>
+            <div className="team-page-doctor">
+              <div className="team-page-doctor__image">
+                <div className="team-page-doctor__image-placeholder">
+                  <User size={44} />
+                </div>
+              </div>
+              <div className="team-page-doctor__body">
+                <span className="team-page-doctor__role">
+                  Arzt & Praxisinhaber
+                </span>
+                <h2 className="team-page-doctor__name">
+                  Heur docteur en médecine Fayçal Chadli
+                </h2>
+                <div className="team-page-doctor__tags">
+                  <span className="team-page-doctor__tag">
+                    Facharzt für Innere Medizin
+                  </span>
+                  <span className="team-page-doctor__tag">
+                    Diabetologe DDG/LAK
+                  </span>
+                  <span className="team-page-doctor__tag">
+                    Hypertensiologe DHL
+                  </span>
+                  <span className="team-page-doctor__tag">
+                    Adiposiologe DAG/DDG
+                  </span>
+                  <span className="team-page-doctor__tag">Notarzt</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="team-page-doctor__body">
-            <span className="team-page-doctor__role">Arzt & Praxisinhaber</span>
-            <h2 className="team-page-doctor__name">
-            Herr docteur en médecine Fayçal Chadli
-            </h2>
-            <div className="team-page-doctor__tags">
-              <span className="team-page-doctor__tag">Facharzt für Innere Medizin</span>
-              <span className="team-page-doctor__tag">Diabetologe DDG/LAK</span>
-              <span className="team-page-doctor__tag">Hypertensiologe DHL</span>
-              <span className="team-page-doctor__tag">Adiposiologe DAG/DDG</span>
-              <span className="team-page-doctor__tag">Notarzt</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
           {/* ── Praxismanagement ── */}
           <div className="team-page-section">
@@ -74,9 +83,10 @@ export default function Vita() {
                   </div>
                 </div>
                 <div className="team-page-card__body">
-                   <h3 className="team-page-card__name">Nawel Chiali</h3>
-                  <span className="team-page-card__role">Teamleitung Medizinische Fachangestellte</span>
-                 
+                  <h3 className="team-page-card__name">Nawel Chiali</h3>
+                  <span className="team-page-card__role">
+                    Teamleitung Medizinische Fachangestellte
+                  </span>
                 </div>
               </div>
             </div>
@@ -94,9 +104,13 @@ export default function Vita() {
                   </div>
                 </div>
                 <div className="team-page-card__body">
-                  <span className="team-page-card__role">Diabetesberaterin DDG</span>
+                  <span className="team-page-card__role">
+                    Diabetesberaterin DDG
+                  </span>
                   <h3 className="team-page-card__name">Nawel Chiali</h3>
-                  <span className="team-page-card__extra-title">Akademischer Hintergrund</span>
+                  <span className="team-page-card__extra-title">
+                    Akademischer Hintergrund
+                  </span>
                   <div className="team-page-card__extra-list">
                     <span>M.Sc. Ernährungswissenschaften</span>
                     <span>Master Gesundheitswissenschaften</span>
@@ -126,8 +140,10 @@ export default function Vita() {
 
           {/* ── Medizinische Fachangestellte ── */}
           <div className="team-page-section">
-            <span className="team-page-eyebrow">Medizinische Fachangestellte</span>
-            
+            <span className="team-page-eyebrow">
+              Medizinische Fachangestellte
+            </span>
+
             <div className="team-page-grid">
               <div className="team-page-card">
                 <div className="team-page-card__image">
@@ -137,7 +153,9 @@ export default function Vita() {
                 </div>
                 <div className="team-page-card__body">
                   <h3 className="team-page-card__name">Diana Masalchi</h3>
-                  <span className="team-page-card__role">Medizinische Fachangestellte (in Ausbildung)</span>
+                  <span className="team-page-card__role">
+                    Medizinische Fachangestellte (in Ausbildung)
+                  </span>
                   <p className="team-page-card__extra">
                     Stellvertretende Teamleitung Medizinische Fachangestellte
                   </p>
@@ -152,7 +170,9 @@ export default function Vita() {
                 </div>
                 <div className="team-page-card__body">
                   <h3 className="team-page-card__name">Karolina Paula</h3>
-                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
+                  <span className="team-page-card__role">
+                    Medizinische Fachangestellte
+                  </span>
                 </div>
               </div>
 
@@ -164,17 +184,16 @@ export default function Vita() {
                 </div>
                 <div className="team-page-card__body">
                   <h3 className="team-page-card__name">Nelja Zgodic</h3>
-                  <span className="team-page-card__role">Medizinische Fachangestellte</span>
-                  <p className="team-page-card__extra">
-                    Derzeit in Elternzeit
-                  </p>
+                  <span className="team-page-card__role">
+                    Medizinische Fachangestellte
+                  </span>
+                  <p className="team-page-card__extra">Derzeit in Elternzeit</p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </>
-  )
+  );
 }

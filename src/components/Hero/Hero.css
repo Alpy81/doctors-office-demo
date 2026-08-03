@@ -215,7 +215,8 @@
   font-size: var(--fs-sm);
   font-weight: 600;
   letter-spacing: 0.03em;
-  transition: transform var(--transition-fast),
+  transition:
+    transform var(--transition-fast),
     box-shadow var(--transition-fast);
   cursor: pointer;
   border: none;

@@ -6,26 +6,39 @@ import mitarbeiterin from "../../assets/images/mitarbeiterin.jpg";
 const team = [
   {
     image: arzt,
-    alt: "Docteur en Medicine/Univ. Oran Faycal Chadli",
+    alt: "Fayçal Chadli",
     role: "Facharzt & Praxisinhaber",
-    name: "Docteur en Medicine/Univ. Oran Faycal Chadli",
-    text: "Facharzt für Innere Medizin und zertifizierter Diabetologe. Mit langjähriger Erfahrung und tiefem Einfühlungsvermögen begleitet er seine Patienten auf dem Weg zu mehr Gesundheit und Lebensqualität.",
-    tags: ["Diabetologie", "Innere Medizin", "DMP-Programme"],
+    name: "Fayçal Chadli",
+    text: "„Gute Medizin beginnt für mich mit dem Zuhören. Ich nehme mir Zeit, Beschwerden zu verstehen, Zusammenhänge zu erkennen und gemeinsam mit meinen Patientinnen und Patienten den passenden Behandlungsweg zu finden.“",
+    isQuote: true,
+    tags: [
+      "Facharzt für Innere Medizin",
+      "Diabetologe",
+      "Adiposiologe",
+      "Hypertensiologe",
+      "Notarzt",
+    ],
   },
   {
     image: aerztin,
-    alt: "Ärztin Dr. Chadli",
-    role: "Fachärztin & Praxisinhaberin",
-    name: "Dr. med. Chadli",
-    text: "Als Fachärztin mit Herz und Kompetenz steht sie für eine ganzheitliche und empathische Patientenversorgung. Gemeinsam mit ihrem Mann führt sie die Praxis mit Leidenschaft und Engagement.",
-    tags: ["Hausarzt", "Vorsorge", "Psychosomatik"],
+    alt: "Nawel Chiali",
+    role: "Diabetesberaterin & Praxismanagerin",
+    name: "Nawel Chiali",
+    text: "„Diese Praxis ist für mich mehr als ein Arbeitsplatz. Sie ist ein Herzensprojekt, in dem ich Menschen mit Wissen, Zeit und persönlicher Begleitung unterstützen möchte.“",
+    isQuote: true,
+    tags: [
+      "Diabetesberaterin DDG",
+      "M.Sc. Ernährungswissenschaften",
+      "Praxismanagerin",
+    ],
   },
+
   {
     image: mitarbeiterin,
-    alt: "Praxisteam",
-    role: "Medizinische Fachangestellte",
-    name: "Unser Praxisteam",
-    text: "Unser freundliches und kompetentes Team empfängt Sie herzlich und sorgt dafür, dass Sie sich von der ersten Minute an gut aufgehoben fühlen.",
+    role: "Unser Praxisteam",
+    name: "Gemeinsam für Sie da.",
+    text: "Mit Herz, Kompetenz und Respekt – für Sie da.",
+    isQuote: true,
     tags: ["Empfang", "Organisation", "Betreuung"],
   },
 ];
@@ -37,10 +50,9 @@ export default function Team() {
         {/* Header */}
         <div className="team__header">
           <span className="team__tag">Unser Team</span>
-          <h2 className="team__title">Menschen, denen Sie vertrauen können</h2>
+          <h2 className="team__title">Lernen Sie unser Team kennen</h2>
           <p className="team__subtitle">
-            Hinter jeder guten Praxis stehen Menschen mit Leidenschaft. Lernen
-            Sie unser Team kennen — wir freuen uns auf Sie.
+            Zeit. Zuhören. Vertrauen. Darauf bauen wir unsere Medizin auf.
           </p>
         </div>
 
@@ -54,7 +66,11 @@ export default function Team() {
               <div className="team__card-body">
                 <span className="team__card-role">{member.role}</span>
                 <h3 className="team__card-name">{member.name}</h3>
-                <p className="team__card-text">{member.text}</p>
+                <p
+                  className={`team__card-text ${member.isQuote ? "team__card-text--quote" : ""}`}
+                >
+                  {member.text}
+                </p>
                 <div className="team__card-divider" />
                 <div className="team__card-tags">
                   {member.tags.map((tag) => (

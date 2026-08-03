@@ -54,7 +54,7 @@
 
 .team__subtitle {
   font-size: var(--fs-base);
-  color: var(--color-text-light);
+  color: black;
   max-width: 540px;
   margin-inline: auto;
   line-height: 1.8;
@@ -73,7 +73,8 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-base),
+  transition:
+    transform var(--transition-base),
     box-shadow var(--transition-base);
 }
 
@@ -162,6 +163,14 @@
   font-size: var(--fs-xs);
   color: var(--color-primary);
   font-weight: 500;
+}
+
+.team__card-text--quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--color-primary);
+  line-height: 1.75;
 }
 
 /* ============================================

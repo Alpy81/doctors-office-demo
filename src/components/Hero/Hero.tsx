@@ -28,32 +28,29 @@ export default function Hero() {
         <div className="hero__left">
           <div className="hero__badge">
             <span className="hero__badge-dot" />
-            Ihre Praxis in guten Händen
+            Ihre Gesundheit in guten Händen
           </div>
 
           <h1 className="hero__title">
-            Medizin mit
-            <span className="hero__title-accent">
-              <span style={{ color: "var(--color-accent)" }}>Herz</span>
-              <span style={{ color: "var(--color-white)" }}> & </span>
-              Kompetenz
-            </span>
+            Medizin mit Kompetenz.{" "}
+            <span className="hero__title-accent">Zeit für Menschen.</span>
           </h1>
 
-          <p className="hero__subtitle">
-            Willkommen in der Praxis Docteur en Medicine/Univ. Oran Faycal
-            Chadli Chadli — Ihr erfahrener Diabetologe und Hausarzt. Wir
-            begleiten Sie mit modernster Medizin, persönlicher Fürsorge und
-            einem Team, das Sie kennt.
+          <p className="hero__subtitle" style={{ marginBottom: "0.01em" }}>
+            Willkommen in der Praxis Chadli in Frankfurt Fechenheim.
           </p>
-
-          
+          <p className="hero__subtitle">
+            Wir verbinden moderne internistische Medizin mit persönlicher
+            Betreuung. Ob Vorsorge, Akutmedizin oder Diabetologie – wir
+            begleiten Sie kompetent, verständlich und langfristig.
+          </p>
 
           {/* Buttons */}
           <div className="hero__actions">
             <NavLink
               to="/leistungen/diabetologie"
-              className="hero__btn hero__btn--outline">
+              className="hero__btn hero__btn--outline"
+            >
               <Activity size={18} />
               Unsere Leistungen
             </NavLink>

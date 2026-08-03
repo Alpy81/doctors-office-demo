@@ -1,33 +1,39 @@
 import { NavLink } from "react-router-dom";
-import { Award, Users, Clock, HeartHandshake, ArrowRight } from "lucide-react";
+import {
+  HeartHandshake,
+  Stethoscope,
+  Droplets,
+  Languages,
+  ArrowRight,
+} from "lucide-react";
 import "./WhyUs.css";
 import behandlungsraum from "../../assets/images/behandlungsraum2.jpg";
 import sprechzimmer from "../../assets/images/sprechzimmer.jpg";
 
 const features = [
   {
-    icon: <Award size={24} />,
-    iconBg: "icon--blue",
-    title: "Spezialisierte Fachkompetenz",
-    text: "Als zertifizierter Diabetologe bringt Dr. Chadli jahrelange Expertise in der Behandlung aller Diabetesformen mit — für Ihre bestmögliche Versorgung.",
-  },
-  {
     icon: <HeartHandshake size={24} />,
     iconBg: "icon--red",
-    title: "Persönliche & empathische Betreuung",
-    text: "Wir nehmen uns Zeit für Sie. Jeder Patient ist einzigartig — unsere Behandlung ist es auch. Vertrauen und Offenheit stehen bei uns an erster Stelle.",
+    title: "Persönliche Betreuung",
+    text: "Wir nehmen uns Zeit für Ihre Anliegen und entwickeln individuelle Behandlungskonzepte.",
   },
   {
-    icon: <Users size={24} />,
+    icon: <Stethoscope size={24} />,
+    iconBg: "icon--blue",
+    title: "Internistische Kompetenz",
+    text: "Umfassende internistische Versorgung — von der Vorsorge bis zur langfristigen Betreuung chronischer Erkrankungen.",
+  },
+  {
+    icon: <Droplets size={24} />,
     iconBg: "icon--navy",
-    title: "Ein Team, das zusammenhält",
-    text: "Als Arztehepaar führen Dr. Chadli und seine Frau die Praxis mit Leidenschaft. Unser eingespieltes Team begleitet Sie von der Anmeldung bis zur Nachsorge.",
+    title: "Diabetologische Spezialisierung",
+    text: "Betreuung aller Diabetesformen — von der Diagnose bis zur langfristigen Therapie.",
   },
   {
-    icon: <Clock size={24} />,
+    icon: <Languages size={24} />,
     iconBg: "icon--teal",
-    title: "Moderne Ausstattung & kurze Wege",
-    text: "Modernste Diagnostik, digitale Akten und eine freundliche Atmosphäre — in unserer neuen Praxis erwartet Sie Medizin auf dem neuesten Stand.",
+    title: "Mehrsprachige Beratung",
+    text: "Beratung auf Deutsch, Französisch, Englisch und Arabisch.",
   },
 ];
 
@@ -58,15 +64,12 @@ export default function WhyUs() {
           <div className="why-us__right">
             <span className="why-us__tag">Warum wir?</span>
 
-            <h2 className="why-us__title">
-              Ihre Gesundheit ist
-              <span> unsere Berufung</span>
-            </h2>
+            <h2 className="why-us__title">Warum Praxis Chadli?</h2>
 
             <p className="why-us__text">
-              In unserer Praxis verbinden wir medizinische Exzellenz mit
-              menschlicher Wärme. Wir glauben, dass gute Medizin dann entsteht,
-              wenn Arzt und Patient einander vertrauen.
+              Medizin bedeutet für uns mehr als Diagnosen und Behandlungen. Sie
+              beginnt mit Zuhören, Vertrauen und dem gemeinsamen Ziel, für jeden
+              Menschen den bestmöglichen Weg zu finden.
             </p>
 
             {/* Features */}
