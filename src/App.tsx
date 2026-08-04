@@ -20,8 +20,9 @@ import Vita from "./pages/Vita/Vita";
 import Praxis from "./pages/Praxis/Praxis";
 import Kontakt from "./pages/Kontakt/Kontakt";
 import Karriere from "./pages/Karriere/Karriere";
-import SchulungenDiabetes from './pages/Leistungen/SchulungenDiabetes'
-import SchulungenHypertonie from './pages/Leistungen/SchulungenHypertonie'
+import SchulungenDiabetes from "./pages/Leistungen/SchulungenDiabetes";
+import SchulungenHypertonie from "./pages/Leistungen/SchulungenHypertonie";
+import Bewerbung from "./pages/Karriere/Bewerbung";
 
 function App() {
   const [cookieAccepted, setCookieAccepted] = useState<boolean | null>(() => {
@@ -65,8 +66,14 @@ function App() {
         <Route path="/leistungen/hausaerztlich" element={<Hausaerztlich />} />
         <Route path="/leistungen/internistisch" element={<Internistisch />} />
         <Route path="/leistungen/diabetologie" element={<Diabetologie />} />
-        <Route path="/leistungen/schulungen-diabetes" element={<SchulungenDiabetes />} />
-        <Route path="/leistungen/schulungen-hypertonie" element={<SchulungenHypertonie />} />
+        <Route
+          path="/leistungen/schulungen-diabetes"
+          element={<SchulungenDiabetes />}
+        />
+        <Route
+          path="/leistungen/schulungen-hypertonie"
+          element={<SchulungenHypertonie />}
+        />
         <Route path="/leistungen/vorsorge" element={<Vorsorge />} />
         <Route path="/leistungen/impfungen" element={<Impfungen />} />
         <Route path="/leistungen/psychosomatik" element={<Psychosomatik />} />
@@ -77,6 +84,7 @@ function App() {
         <Route path="/praxis" element={<Praxis />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/karriere" element={<Karriere />} />
+        <Route path="/karriere/bewerbung" element={<Bewerbung />} />
       </Routes>
       <Footer />
 

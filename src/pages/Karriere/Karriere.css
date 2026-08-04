@@ -131,6 +131,10 @@
   max-width: 700px;
 }
 
+.karriere-hero-title2 {
+  color: var(--color-secondary);
+}
+
 .karriere-hero__subtitle {
   font-size: var(--fs-base);
   color: rgba(255, 255, 255, 0.7);
@@ -184,8 +188,8 @@
 }
 
 .karriere-content__intro {
-  font-size: var(--fs-base);
-  color: var(--color-text-light);
+  font-size: var(--fs-xl);
+  color: var(--color-secondary);
   line-height: 1.85;
 }
 
@@ -324,6 +328,71 @@
 .karriere-sidebar__btn--outline:hover {
   background: rgba(255, 255, 255, 0.08);
   box-shadow: none;
+}
+
+/* ── Lead & Subtitle ── */
+.karriere-content__lead {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.4;
+  margin-top: 4px;
+  margin-bottom: var(--space-xs);
+}
+
+.karriere-content__subtitle {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Jetzt bewerben ── */
+.karriere-apply {
+  margin-top: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.karriere-apply__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 6px;
+}
+
+.karriere-apply__text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.karriere-apply__text--bold {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.karriere-apply__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: underline;
+  margin-block: 4px;
+}
+
+.karriere-apply__email:hover {
+  color: var(--color-primary);
 }
 
 /* ============================================
