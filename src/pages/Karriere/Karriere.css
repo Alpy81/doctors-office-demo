@@ -190,7 +190,8 @@
 .karriere-content__intro {
   font-size: var(--fs-xl);
   color: var(--color-secondary);
-  line-height: 1.85;
+  line-height: 1.2;
+  margin-bottom: var(--space-xs);
 }
 
 /* ── Benefits Grid ── */
@@ -345,7 +346,7 @@
   font-size: var(--fs-lg);
   font-weight: 600;
   color: var(--color-secondary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 /* ── Jetzt bewerben ── */
@@ -392,6 +393,15 @@
 }
 
 .karriere-apply__email:hover {
+  color: var(--color-primary);
+}
+
+.karriere-apply__title-link {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.karriere-apply__title-link:hover .karriere-apply__title {
   color: var(--color-primary);
 }
 

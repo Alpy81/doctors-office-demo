@@ -115,7 +115,12 @@ export default function Karriere() {
 
               {/* Jetzt bewerben */}
               <div className="karriere-apply">
-                <h2 className="karriere-apply__title">Jetzt bewerben</h2>
+                <NavLink
+                  to="/karriere/bewerbung"
+                  className="karriere-apply__title-link"
+                >
+                  <h2 className="karriere-apply__title">Jetzt bewerben</h2>
+                </NavLink>
                 <p className="karriere-apply__text">
                   Haben wir Ihr Interesse geweckt?
                 </p>
