@@ -486,6 +486,19 @@
      RESPONSIVE
      ============================================ */
 @media (max-width: 1024px) {
+  .praxis-hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .praxis-hero__breadcrumb {
+    justify-content: center;
+  }
+
+  .praxis-hero__tag {
+    margin-inline: auto;
+  }
+
   .praxis-about__inner {
     grid-template-columns: 1fr;
   }

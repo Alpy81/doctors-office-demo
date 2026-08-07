@@ -385,6 +385,19 @@
      RESPONSIVE
      ============================================ */
 @media (max-width: 1024px) {
+  .kontakt-hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .kontakt-hero__breadcrumb {
+    justify-content: center;
+  }
+
+  .kontakt-hero__tag {
+    margin-inline: auto;
+  }
+
   .kontakt-main__inner {
     grid-template-columns: 1fr;
   }

@@ -73,7 +73,8 @@ export default function Karriere() {
             Werden Sie Teil der <br></br>Praxis Chadli
           </h1>
           <h2 className="karriere-hero-title2">
-            Medizin mit Kompetenz. Zeit für Menschen.
+            Medizin mit Kompetenz.
+            <br /> Zeit für Menschen.
           </h2>
           <p className="karriere-hero__subtitle">
             Sie möchten in einer internistischen Praxis arbeiten, in der

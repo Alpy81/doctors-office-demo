@@ -231,13 +231,13 @@ export default function Praxis() {
               alignItems: "center",
               gap: "8px",
               padding: "15px 40px",
-              background: "linear-gradient(135deg, #ed8c63, #c0392b)",
+              background: "linear-gradient(135deg, #7dd4ed, #4ab8d8, #2980b9)",
               color: "var(--color-white)",
               borderRadius: "var(--radius-full)",
               fontSize: "var(--fs-sm)",
               fontWeight: 600,
               textDecoration: "none",
-              boxShadow: "0 6px 20px rgba(192, 57, 43, 0.40)",
+              boxShadow: "0 4px 16px rgba(74, 184, 216, 0.4)",
             }}
           >
             Unser Team entdecken →

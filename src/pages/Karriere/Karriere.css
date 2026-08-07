@@ -409,6 +409,19 @@
      RESPONSIVE
      ============================================ */
 @media (max-width: 1024px) {
+  .karriere-hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .karriere-hero__breadcrumb {
+    justify-content: center;
+  }
+
+  .karriere-hero__tag {
+    margin-inline: auto;
+  }
+
   .karriere-main__inner {
     grid-template-columns: 1fr;
   }
