@@ -8,7 +8,7 @@
   min-height: 380px;
   display: flex;
   align-items: flex-end;
-  background: linear-gradient(135deg, #0d2145 0%, #1A3A6B 60%, #1a5276 100%);
+  background: linear-gradient(135deg, #0d2145 0%, #1a3a6b 60%, #1a5276 100%);
   overflow: hidden;
   padding-bottom: var(--space-2xl);
 }
@@ -21,7 +21,7 @@
     105deg,
     rgba(13, 33, 69, 0.97) 0%,
     rgba(26, 58, 107, 0.85) 60%,
-    rgba(74, 184, 216, 0.10) 100%
+    rgba(74, 184, 216, 0.1) 100%
   );
 }
 
@@ -43,7 +43,11 @@
   height: 500px;
   top: -20%;
   right: -5%;
-  background: radial-gradient(circle, rgba(74, 184, 216, 0.06) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(74, 184, 216, 0.06) 0%,
+    transparent 70%
+  );
 }
 
 .team-page-hero__deco-circle--2 {
@@ -72,11 +76,11 @@
   align-items: center;
   gap: 8px;
   font-size: var(--fs-xs);
-  color: rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .team-page-hero__breadcrumb a {
-  color: rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -95,7 +99,7 @@
   gap: 8px;
   padding: 7px 16px;
   background: rgba(74, 184, 216, 0.15);
-  border: 1px solid rgba(74, 184, 216, 0.30);
+  border: 1px solid rgba(74, 184, 216, 0.3);
   border-radius: var(--radius-full);
   color: var(--color-secondary);
   font-size: var(--fs-xs);
@@ -145,7 +149,7 @@
   width: 100%;
   padding: 6px 16px;
   background: rgba(74, 184, 216, 0.12);
-  border: 1px solid rgba(74, 184, 216, 0.30);
+  border: 1px solid rgba(74, 184, 216, 0.3);
   border-radius: var(--radius-full);
   font-size: var(--fs-sm);
   font-weight: 700;
@@ -156,24 +160,13 @@
 }
 
 .team-page-section-title {
+  display: flex;
+  justify-content: center;
   font-family: var(--font-heading);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: var(--space-lg);
-  position: relative;
-  padding-bottom: var(--space-sm);
-}
-
-.team-page-section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 48px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
-  border-radius: var(--radius-full);
 }
 
 /* ── Arzt Feature Card ── */
@@ -184,8 +177,9 @@
   display: grid;
   grid-template-columns: 420px 1fr;
   overflow: hidden;
-  transition: transform var(--transition-base),
-              box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .team-page-doctor:hover {
@@ -195,7 +189,11 @@
 
 .team-page-doctor__image {
   position: relative;
-  background: linear-gradient(135deg, rgba(74,184,216,0.12), rgba(26,58,107,0.10));
+  background: linear-gradient(
+    135deg,
+    rgba(74, 184, 216, 0.12),
+    rgba(26, 58, 107, 0.1)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,7 +226,7 @@
   width: fit-content;
   padding: 6px 16px;
   background: rgba(74, 184, 216, 0.12);
-  border: 1px solid rgba(74, 184, 216, 0.30);
+  border: 1px solid rgba(74, 184, 216, 0.3);
   border-radius: var(--radius-full);
   font-size: var(--fs-sm);
   font-weight: 700;
@@ -276,8 +274,9 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-base),
-              box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .team-page-card:hover {
@@ -288,7 +287,11 @@
 .team-page-card__image {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: linear-gradient(135deg, rgba(74,184,216,0.10), rgba(26,58,107,0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(74, 184, 216, 0.1),
+    rgba(26, 58, 107, 0.08)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -348,6 +351,7 @@
   flex-direction: column;
   gap: 3px;
   margin-top: 2px;
+  align-items: flex-start;
 }
 
 .team-page-card__extra-list span {
@@ -356,10 +360,11 @@
   line-height: 1.6;
   padding-left: 12px;
   position: relative;
+  text-align: left;
 }
 
 .team-page-card__extra-list span::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 8px;
@@ -387,8 +392,8 @@
 }
 
 .team-page-card--vacant .team-page-card__image-placeholder {
-  background: rgba(74, 184, 216, 0.10);
-  border: 1.5px dashed rgba(74, 184, 216, 0.40);
+  background: rgba(74, 184, 216, 0.1);
+  border: 1.5px dashed rgba(74, 184, 216, 0.4);
 }
 
 .team-page-card__vacant-badge {
@@ -405,12 +410,42 @@
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
+  .team-page-hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-page-hero__breadcrumb {
+    justify-content: center;
+  }
+
   .team-page-doctor {
     grid-template-columns: 1fr;
   }
 
   .team-page-doctor__image {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
+  }
+
+  .team-page-doctor__body {
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-page-doctor__tags {
+    justify-content: center;
+  }
+
+  .team-page-section {
+    text-align: center;
+  }
+
+  .team-page-eyebrow {
+    margin-inline: auto;
+  }
+
+  .team-page-section-title {
+    text-align: center;
   }
 
   .team-page-grid {
@@ -419,6 +454,20 @@
 
   .team-page-grid--two {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-page-card__body {
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-page-card__extra-list {
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  .team-page-card__role {
+    margin-inline: auto;
   }
 }
 

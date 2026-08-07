@@ -335,7 +335,8 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-base),
+  transition:
+    transform var(--transition-base),
     box-shadow var(--transition-base);
 }
 
@@ -430,7 +431,8 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   background: var(--color-white);
-  transition: transform var(--transition-base),
+  transition:
+    transform var(--transition-base),
     box-shadow var(--transition-base);
 }
 
@@ -476,6 +478,10 @@
   line-height: 1.7;
 }
 
+.praxis-rooms__break {
+  display: none;
+}
+
 /* ============================================
      RESPONSIVE
      ============================================ */
@@ -488,6 +494,15 @@
     height: clamp(320px, 70vw, 480px);
   }
 
+  .praxis-about__tag {
+    margin-inline: auto;
+  }
+
+  .praxis-about__title,
+  .praxis-about__text {
+    text-align: center;
+  }
+
   .praxis-stats__inner {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -498,6 +513,22 @@
 
   .praxis-rooms__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .praxis-rooms {
+    padding-block: var(--space-2xl);
+  }
+
+  .praxis-rooms__header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .praxis-rooms__title {
+    font-size: var(--fs-xl);
+  }
+
+  .praxis-rooms__break {
+    display: block;
   }
 }
 

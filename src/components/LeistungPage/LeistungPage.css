@@ -207,8 +207,10 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   border: 1px solid transparent;
-  transition: border-color var(--transition-base),
-    box-shadow var(--transition-base), transform var(--transition-base);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 }
 
 .leistung-list__item:hover {
@@ -294,14 +296,15 @@
   font-size: var(--fs-sm);
   font-weight: 600;
   text-decoration: none;
-  transition: transform var(--transition-fast),
+  transition:
+    transform var(--transition-fast),
     box-shadow var(--transition-fast);
- box-shadow: 0 4px 16px rgba(74, 184, 216, 0.40);
+  box-shadow: 0 4px 16px rgba(74, 184, 216, 0.4);
 }
 
 .leistung-sidebar__btn:hover {
   transform: translateY(-2px);
-   box-shadow: 0 4px 16px rgba(74, 184, 216, 0.40);
+  box-shadow: 0 4px 16px rgba(74, 184, 216, 0.4);
 }
 
 .leistung-sidebar__btn--outline {
@@ -323,14 +326,21 @@
 
 .leistung-sidebar__link {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   padding: 10px 12px;
   border-radius: var(--radius-md);
   font-size: var(--fs-sm);
   color: var(--color-text);
   text-decoration: none;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.leistung-sidebar__link svg {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .leistung-sidebar__link:hover {
@@ -356,8 +366,9 @@
   padding: var(--space-md) var(--space-lg);
   box-shadow: var(--shadow-sm);
   border: 1px solid transparent;
-  transition: border-color var(--transition-base),
-              box-shadow var(--transition-base);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .leistung-program:hover {
@@ -408,12 +419,76 @@
      RESPONSIVE
      ============================================ */
 @media (max-width: 1024px) {
+  .leistung-hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .leistung-hero__breadcrumb {
+    justify-content: center;
+  }
+
+  .leistung-hero__tag {
+    margin-inline: auto;
+  }
+
   .leistung-main__inner {
     grid-template-columns: 1fr;
   }
 
+  .leistung-content__section-title {
+    text-align: center;
+  }
+
+  .leistung-content__section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .leistung-content__intro {
+    text-align: center;
+  }
+
+  .leistung-list__item {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leistung-program {
+    text-align: center;
+  }
+
+  .leistung-program__points {
+    align-items: stretch;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .leistung-program__point {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
   .leistung-sidebar {
     position: static;
+  }
+
+  .leistung-sidebar__card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .leistung-sidebar__links {
+    align-items: stretch;
+    width: 100%;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+
+  .leistung-sidebar__link {
+    justify-content: flex-start;
+    text-align: left;
   }
 }
 

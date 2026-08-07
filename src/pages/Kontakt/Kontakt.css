@@ -392,6 +392,15 @@
   .kontakt-sidebar {
     position: static;
   }
+
+  .kontakt-form__title {
+    text-align: center;
+  }
+
+  .kontakt-form__title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 600px) {

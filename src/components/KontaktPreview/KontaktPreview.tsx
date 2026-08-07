@@ -34,7 +34,7 @@ export default function KontaktPreview() {
             </div>
             <div className="kontakt-preview__address">
               <span className="kontakt-preview__address-line">
-                Praxis Docteur en Medicine/Univ. Oran Faycal Chadli
+                Praxis Chadli
               </span>
               <span className="kontakt-preview__address-line">
                 Alt-Fechenheim 76
@@ -47,7 +47,8 @@ export default function KontaktPreview() {
               href="https://maps.google.com/maps?q=Alt-Fechenheim+76,+60386+Frankfurt+am+Main"
               target="_blank"
               rel="noopener noreferrer"
-              className="kontakt-preview__map-btn">
+              className="kontakt-preview__map-btn"
+            >
               Route planen <ArrowRight size={14} />
             </a>
           </div>
@@ -102,7 +103,8 @@ export default function KontaktPreview() {
                   </span>
                   <a
                     href="tel:+4969941392118"
-                    className="kontakt-preview__contact-value">
+                    className="kontakt-preview__contact-value"
+                  >
                     +49 (69) 94 13 92 118
                   </a>
                 </div>
@@ -115,7 +117,8 @@ export default function KontaktPreview() {
                   <span className="kontakt-preview__contact-label">E-Mail</span>
                   <a
                     href="mailto:info@praxis-chadli.de"
-                    className="kontakt-preview__contact-value">
+                    className="kontakt-preview__contact-value"
+                  >
                     info@praxis-chadli.de
                   </a>
                 </div>

@@ -416,6 +416,18 @@
   .karriere-sidebar {
     position: static;
   }
+
+  .karriere-content__intro {
+    text-align: center;
+  }
+
+  .karriere-content__lead {
+    text-align: center;
+  }
+
+  .karriere-content__subtitle {
+    text-align: center;
+  }
 }
 
 @media (max-width: 640px) {

@@ -223,7 +223,8 @@
   font-weight: 600;
   width: fit-content;
   text-decoration: none;
-  transition: transform var(--transition-fast),
+  transition:
+    transform var(--transition-fast),
     box-shadow var(--transition-fast);
   box-shadow: 0 6px 20px rgba(26, 58, 107, 0.3);
 }
@@ -246,9 +247,19 @@
     height: clamp(320px, 70vw, 480px);
   }
 
-   .why-us__cta {
+  .why-us__cta {
     align-self: center;
     margin-inline: auto;
+  }
+
+  .why-us__tag {
+    align-self: center;
+    margin-inline: auto;
+  }
+
+  .why-us__title,
+  .why-us__text {
+    text-align: center;
   }
 }
 

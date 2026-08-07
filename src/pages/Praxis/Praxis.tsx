@@ -251,7 +251,7 @@ export default function Praxis() {
           <div className="praxis-rooms__header">
             <span className="praxis-rooms__tag">Unsere Räume</span>
             <h2 className="praxis-rooms__title">
-              Moderne Praxis — angenehme Atmosphäre
+              Moderne Praxis —<br /> angenehme Atmosphäre
             </h2>
           </div>
           <div className="praxis-rooms__grid">
