@@ -160,6 +160,23 @@ export default function Adipositas() {
                     </div>
                   ))}
                 </div>
+
+                {/* Hinweis-Banner zu Hypertonie-Schulungen */}
+                <div className="leistung-hint">
+                  <div className="leistung-hint__text">
+                    <span className="leistung-hint__label">Passend dazu</span>
+                    <span className="leistung-hint__title">
+                      Unsere Hypertonie-Schulungen
+                    </span>
+                  </div>
+                  <NavLink
+                    to="/leistungen/schulungen-hypertonie"
+                    className="leistung-hint__btn"
+                  >
+                    Mehr erfahren
+                    <ArrowRight size={16} />
+                  </NavLink>
+                </div>
               </div>
             </div>
 
@@ -186,7 +203,8 @@ export default function Adipositas() {
                     <NavLink
                       key={item.path}
                       to={item.path}
-                      className="leistung-sidebar__link">
+                      className="leistung-sidebar__link"
+                    >
                       <ArrowRight size={15} />
                       {item.label}
                     </NavLink>

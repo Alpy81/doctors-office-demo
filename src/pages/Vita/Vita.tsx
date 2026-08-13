@@ -112,7 +112,7 @@ export default function Vita() {
                     Akademischer Hintergrund
                   </span>
                   <div className="team-page-card__extra-list">
-                    <span>M.Sc. Ernährungswissenschaften</span>
+                    <span>Master Science Ernährungswissenschaften</span>
                     <span>Master Gesundheitswissenschaften</span>
                     <span>Bachelor Biologie (Zellbiologie und Genetik)</span>
                   </div>

@@ -415,6 +415,67 @@
   margin-top: 8px;
 }
 
+/* ── Hinweis-Banner mit Navigation ── */
+.leistung-hint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: linear-gradient(
+    135deg,
+    rgba(74, 184, 216, 0.08),
+    rgba(26, 58, 107, 0.06)
+  );
+  border: 1px solid rgba(74, 184, 216, 0.25);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-sm);
+}
+
+.leistung-hint__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.leistung-hint__label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.leistung-hint__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.leistung-hint__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #7dd4ed, #4ab8d8, #2980b9);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  box-shadow: 0 4px 16px rgba(74, 184, 216, 0.4);
+}
+
+.leistung-hint__btn:hover {
+  transform: translateY(-2px) translateX(2px);
+  box-shadow: 0 8px 22px rgba(74, 184, 216, 0.45);
+}
+
 /* ============================================
      RESPONSIVE
      ============================================ */

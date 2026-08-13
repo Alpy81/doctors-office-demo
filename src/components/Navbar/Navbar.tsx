@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
@@ -7,6 +7,8 @@ import logo from "../../assets/images/logo.png";
 const leistungen = [
   { label: "Hausärztliche Versorgung", path: "/leistungen/hausaerztlich" },
   { label: "Internistische Leistungen", path: "/leistungen/internistisch" },
+  { label: "DMP-Programme", path: "/leistungen/dmp" },
+  { label: "Diabetologie", path: "/leistungen/diabetologie" },
   {
     label: "Vorsorge- & Check-up-Untersuchungen",
     path: "/leistungen/vorsorge",
@@ -22,7 +24,6 @@ const leistungen = [
 
 const diabetologie = [
   { label: "Diabetologie", path: "/leistungen/diabetologie" },
-  { label: "DMP-Programme", path: "/leistungen/dmp" },
 ];
 const schulungen = [
   { label: "Diabetes-Schulungen", path: "/leistungen/schulungen-diabetes" },
@@ -36,6 +37,8 @@ export default function Navbar() {
   const [diabetologieOpen, setDiabetologieOpen] = useState(false);
   const [schulungenOpen, setSchulungenOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isDiabetologiePage = location.pathname === "/leistungen/diabetologie";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -71,7 +74,6 @@ export default function Navbar() {
             </div>
           </div>
         </NavLink>
-
         {/* Desktop Navigation */}
         <nav className="navbar__nav">
           <NavLink to="/praxis" className="navbar__link">
@@ -89,7 +91,8 @@ export default function Navbar() {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="navbar__dropdown-item">
+                  className="navbar__dropdown-item"
+                >
                   {item.label}
                 </NavLink>
               ))}
@@ -107,13 +110,14 @@ export default function Navbar() {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="navbar__dropdown-item">
+                  className="navbar__dropdown-item"
+                >
                   {item.label}
                 </NavLink>
               ))}
             </div>
           </div>
-        {/* Schulungen Dropdown */}
+          {/* Schulungen Dropdown */}
           <div className="navbar__dropdown">
             <button className="navbar__dropdown-trigger">
               Schulungen
@@ -124,7 +128,8 @@ export default function Navbar() {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="navbar__dropdown-item">
+                  className="navbar__dropdown-item"
+                >
                   {item.label}
                 </NavLink>
               ))}
@@ -140,17 +145,18 @@ export default function Navbar() {
             Karriere
           </NavLink>
         </nav>
-
         {/* CTA */}
-        <NavLink to="/kontakt" className="navbar__cta">
-          Termin vereinbaren
-        </NavLink>
-
-        {/* Burger */}
+        {isDiabetologiePage && (
+          <NavLink to="/kontakt" className="navbar__cta">
+            Termin vereinbaren
+          </NavLink>
+        )}
+        ‚{/* Burger */}
         <button
           className={`navbar__burger ${mobileOpen ? "open" : ""}`}
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menü öffnen">
+          aria-label="Menü öffnen"
+        >
           <span />
           <span />
           <span />
@@ -163,7 +169,8 @@ export default function Navbar() {
         <div className="navbar__mobile-accordion">
           <button
             className="navbar__mobile-accordion-trigger"
-            onClick={() => setAccordionOpen(!accordionOpen)}>
+            onClick={() => setAccordionOpen(!accordionOpen)}
+          >
             Leistungen
             <ChevronDown
               size={18}
@@ -186,7 +193,8 @@ export default function Navbar() {
                     textAlign: "left",
                     cursor: "pointer",
                     width: "100%",
-                  }}>
+                  }}
+                >
                   {item.label}
                 </button>
               ))}
@@ -197,13 +205,15 @@ export default function Navbar() {
         <NavLink
           to="/praxis"
           className="navbar__mobile-link"
-          onClick={closeMobile}>
+          onClick={closeMobile}
+        >
           Praxis
         </NavLink>
         <div className="navbar__mobile-accordion">
           <button
             className="navbar__mobile-accordion-trigger"
-            onClick={() => setDiabetologieOpen(!diabetologieOpen)}>
+            onClick={() => setDiabetologieOpen(!diabetologieOpen)}
+          >
             Diabetologie
             <ChevronDown
               size={18}
@@ -226,17 +236,19 @@ export default function Navbar() {
                     textAlign: "left",
                     cursor: "pointer",
                     width: "100%",
-                  }}>
+                  }}
+                >
                   {item.label}
                 </button>
               ))}
             </div>
           )}
         </div>
-    <div className="navbar__mobile-accordion">
+        <div className="navbar__mobile-accordion">
           <button
             className="navbar__mobile-accordion-trigger"
-            onClick={() => setSchulungenOpen(!schulungenOpen)}>
+            onClick={() => setSchulungenOpen(!schulungenOpen)}
+          >
             Schulungen
             <ChevronDown
               size={18}
@@ -259,7 +271,8 @@ export default function Navbar() {
                     textAlign: "left",
                     cursor: "pointer",
                     width: "100%",
-                  }}>
+                  }}
+                >
                   {item.label}
                 </button>
               ))}
@@ -269,25 +282,29 @@ export default function Navbar() {
         <NavLink
           to="/vita"
           className="navbar__mobile-link"
-          onClick={closeMobile}>
+          onClick={closeMobile}
+        >
           Team
         </NavLink>
         <NavLink
           to="/kontakt"
           className="navbar__mobile-link"
-          onClick={closeMobile}>
+          onClick={closeMobile}
+        >
           Kontakt
         </NavLink>
         <NavLink
           to="/karriere"
           className="navbar__mobile-link"
-          onClick={closeMobile}>
+          onClick={closeMobile}
+        >
           Karriere
         </NavLink>
         <NavLink
           to="/kontakt"
           className="navbar__mobile-cta"
-          onClick={closeMobile}>
+          onClick={closeMobile}
+        >
           Termin vereinbaren
         </NavLink>
       </div>
