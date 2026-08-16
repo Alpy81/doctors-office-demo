@@ -28,6 +28,7 @@ const diabetologie = [
 const schulungen = [
   { label: "Diabetes-Schulungen", path: "/leistungen/schulungen-diabetes" },
   { label: "Hypertonie-Schulungen", path: "/leistungen/schulungen-hypertonie" },
+  { label: "Asthma-Schulung", path: "/leistungen/schulungen-asthma" },
 ];
 
 export default function Navbar() {

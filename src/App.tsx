@@ -22,6 +22,7 @@ import Kontakt from "./pages/Kontakt/Kontakt";
 import Karriere from "./pages/Karriere/Karriere";
 import SchulungenDiabetes from "./pages/Leistungen/SchulungenDiabetes";
 import SchulungenHypertonie from "./pages/Leistungen/SchulungenHypertonie";
+import SchulungenAsthma from "./pages/Leistungen/SchulungenAsthma";
 import Bewerbung from "./pages/Karriere/Bewerbung";
 
 function App() {
@@ -73,6 +74,10 @@ function App() {
         <Route
           path="/leistungen/schulungen-hypertonie"
           element={<SchulungenHypertonie />}
+        />
+        <Route
+          path="/leistungen/schulungen-asthma"
+          element={<SchulungenAsthma />}
         />
         <Route path="/leistungen/vorsorge" element={<Vorsorge />} />
         <Route path="/leistungen/impfungen" element={<Impfungen />} />
