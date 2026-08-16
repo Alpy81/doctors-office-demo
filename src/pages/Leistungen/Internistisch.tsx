@@ -113,6 +113,8 @@ export default function Internistisch() {
 
             {/* Sidebar */}
             <aside className="leistung-sidebar">
+              {/* Spacer — ersetzt den entfernten CTA-Block für einheitliche Höhe */}
+
               {/* Weitere Leistungen */}
               <div className="leistung-sidebar__card">
                 <h3 className="leistung-sidebar__title">Weitere Leistungen</h3>

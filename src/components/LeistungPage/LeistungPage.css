@@ -244,8 +244,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  position: sticky;
-  top: calc(var(--navbar-height) + var(--space-md));
+  height: 100%;
+  justify-content: flex-end;
 }
 
 .leistung-sidebar__card {
@@ -532,7 +532,12 @@
   }
 
   .leistung-sidebar {
-    position: static;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .leistung-sidebar__spacer {
+    display: none;
   }
 
   .leistung-sidebar__card {
