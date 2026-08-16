@@ -8,7 +8,6 @@ import {
   Leaf,
   ClipboardList,
   HeartHandshake,
-  CalendarCheck,
   ArrowRight,
   ChevronRight,
 } from "lucide-react";
@@ -126,19 +125,6 @@ export default function Psychosomatik() {
 
             {/* Sidebar */}
             <aside className="leistung-sidebar">
-              {/* CTA Card */}
-              <div className="leistung-sidebar__card leistung-sidebar__card--cta">
-                <h3 className="leistung-sidebar__title">Termin vereinbaren</h3>
-                <p className="leistung-sidebar__text">
-                  Wir hören zu — sprechen Sie uns an. Gemeinsam finden wir den
-                  richtigen Weg für Sie.
-                </p>
-                <NavLink to="/kontakt" className="leistung-sidebar__btn">
-                  <CalendarCheck size={17} />
-                  Jetzt Termin buchen
-                </NavLink>
-              </div>
-
               {/* Weitere Leistungen */}
               <div className="leistung-sidebar__card">
                 <h3 className="leistung-sidebar__title">Weitere Leistungen</h3>
@@ -147,7 +133,8 @@ export default function Psychosomatik() {
                     <NavLink
                       key={item.path}
                       to={item.path}
-                      className="leistung-sidebar__link">
+                      className="leistung-sidebar__link"
+                    >
                       <ArrowRight size={15} />
                       {item.label}
                     </NavLink>

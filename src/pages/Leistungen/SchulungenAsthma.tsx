@@ -1,11 +1,5 @@
 import { NavLink } from "react-router-dom";
-import {
-  Wind,
-  ShieldCheck,
-  CalendarCheck,
-  ArrowRight,
-  ChevronRight,
-} from "lucide-react";
+import { Wind, ShieldCheck, ArrowRight, ChevronRight } from "lucide-react";
 import "../../components/LeistungPage/LeistungPage.css";
 import behandlungsraum from "../../assets/images/behandlungsraum2.jpg";
 
@@ -131,21 +125,6 @@ export default function SchulungenAsthma() {
 
             {/* Sidebar */}
             <aside className="leistung-sidebar">
-              {/* CTA Card */}
-              <div className="leistung-sidebar__card leistung-sidebar__card--cta">
-                <h3 className="leistung-sidebar__title">
-                  Interesse an einer Schulung?
-                </h3>
-                <p className="leistung-sidebar__text">
-                  Wir beraten Sie gerne persönlich und finden gemeinsam das
-                  passende Schulungsangebot für Sie.
-                </p>
-                <NavLink to="/kontakt" className="leistung-sidebar__btn">
-                  <CalendarCheck size={17} />
-                  Jetzt Termin buchen
-                </NavLink>
-              </div>
-
               {/* Weitere Leistungen */}
               <div className="leistung-sidebar__card">
                 <h3 className="leistung-sidebar__title">Weitere Leistungen</h3>

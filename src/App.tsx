@@ -24,6 +24,8 @@ import SchulungenDiabetes from "./pages/Leistungen/SchulungenDiabetes";
 import SchulungenHypertonie from "./pages/Leistungen/SchulungenHypertonie";
 import SchulungenAsthma from "./pages/Leistungen/SchulungenAsthma";
 import Bewerbung from "./pages/Karriere/Bewerbung";
+import AGB from "./pages/Legal/AGB";
+import Datenschutz from "./pages/Legal/Datenschutz";
 
 function App() {
   const [cookieAccepted, setCookieAccepted] = useState<boolean | null>(() => {
@@ -90,6 +92,8 @@ function App() {
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/karriere" element={<Karriere />} />
         <Route path="/karriere/bewerbung" element={<Bewerbung />} />
+        <Route path="/agb" element={<AGB />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
       </Routes>
       <Footer />
 

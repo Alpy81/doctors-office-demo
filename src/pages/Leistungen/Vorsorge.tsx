@@ -8,7 +8,6 @@ import {
   Heart,
   Stethoscope,
   ClipboardList,
-  CalendarCheck,
   ArrowRight,
   ChevronRight,
 } from "lucide-react";
@@ -127,19 +126,6 @@ export default function Vorsorge() {
 
             {/* Sidebar */}
             <aside className="leistung-sidebar">
-              {/* CTA Card */}
-              <div className="leistung-sidebar__card leistung-sidebar__card--cta">
-                <h3 className="leistung-sidebar__title">Termin vereinbaren</h3>
-                <p className="leistung-sidebar__text">
-                  Wir sind für Sie da — rufen Sie uns an oder schreiben Sie uns.
-                  Wir freuen uns auf Sie.
-                </p>
-                <NavLink to="/kontakt" className="leistung-sidebar__btn">
-                  <CalendarCheck size={17} />
-                  Jetzt Termin buchen
-                </NavLink>
-              </div>
-
               {/* Weitere Leistungen */}
               <div className="leistung-sidebar__card">
                 <h3 className="leistung-sidebar__title">Weitere Leistungen</h3>
@@ -148,7 +134,8 @@ export default function Vorsorge() {
                     <NavLink
                       key={item.path}
                       to={item.path}
-                      className="leistung-sidebar__link">
+                      className="leistung-sidebar__link"
+                    >
                       <ArrowRight size={15} />
                       {item.label}
                     </NavLink>

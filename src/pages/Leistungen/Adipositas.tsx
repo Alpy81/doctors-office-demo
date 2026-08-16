@@ -8,7 +8,6 @@ import {
   ClipboardList,
   TrendingDown,
   Stethoscope,
-  CalendarCheck,
   ArrowRight,
   ChevronRight,
   BarChart2,
@@ -182,19 +181,6 @@ export default function Adipositas() {
 
             {/* Sidebar */}
             <aside className="leistung-sidebar">
-              {/* CTA Card */}
-              <div className="leistung-sidebar__card leistung-sidebar__card--cta">
-                <h3 className="leistung-sidebar__title">Termin vereinbaren</h3>
-                <p className="leistung-sidebar__text">
-                  Unser Ziel ist es, Sie langfristig auf Ihrem Weg zu einem
-                  gesünderen Lebensstil zu unterstützen.
-                </p>
-                <NavLink to="/kontakt" className="leistung-sidebar__btn">
-                  <CalendarCheck size={17} />
-                  Jetzt Termin buchen
-                </NavLink>
-              </div>
-
               {/* Weitere Leistungen */}
               <div className="leistung-sidebar__card">
                 <h3 className="leistung-sidebar__title">Weitere Leistungen</h3>
