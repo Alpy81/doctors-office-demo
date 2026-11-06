@@ -134,7 +134,7 @@
   display: grid;
   grid-template-columns: 1fr 480px;
   gap: var(--space-2xl);
-  align-items: start;
+  align-items: stretch;
 }
 
 /* ── Formular ── */
@@ -171,6 +171,16 @@
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   box-shadow: var(--shadow-sm);
+}
+
+/* Formular-Spalte: Box wächst bis zur Unterkante der Sidebar */
+.kontakt-main__inner > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontakt-main__inner > div:first-child .kontakt-form {
+  flex: 1;
 }
 
 .kontakt-form__row {
@@ -342,7 +352,7 @@
 
 .kontakt-sidebar__hour-row {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 12px;
   font-size: var(--fs-xs);
@@ -355,9 +365,29 @@
 }
 
 .kontakt-sidebar__hour-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   font-weight: 600;
   color: var(--color-primary);
+}
+
+.kontakt-sidebar__hour-note {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--color-secondary);
   white-space: nowrap;
+}
+
+/* Zeile mit Hinweis (Mittwoch): mehr Abstand nach oben */
+.kontakt-sidebar__hour-row:has(.kontakt-sidebar__hour-note) {
+  margin-top: 0.75rem;
+}
+
+/* Zeile direkt nach dem Mittwoch (Donnerstag): mehr Abstand nach oben */
+.kontakt-sidebar__hour-row:has(.kontakt-sidebar__hour-note)
+  + .kontakt-sidebar__hour-row {
+  margin-top: 0.75rem;
 }
 
 .kontakt-sidebar__hour-closed {

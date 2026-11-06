@@ -14,7 +14,12 @@ import "./Kontakt.css";
 const hours = [
   { day: "Montag", time: "09:00 – 15:00 Uhr" },
   { day: "Dienstag", time: "09:00 – 15:00 Uhr" },
-  { day: "Mittwoch", time: "08:00 – 12:00 Uhr" },
+  // Hinweis Mittwochs-Nachmittag (optionales Feld "note")
+  {
+    day: "Mittwoch",
+    time: "08:00 – 12:00 Uhr",
+    note: "Nachmittags nach Vereinbarung",
+  },
   { day: "Donnerstag", time: "09:00 – 15:00 Uhr" },
   { day: "Freitag", time: "08:00 – 12:00 Uhr" },
   { day: "Samstag", time: null },
@@ -36,7 +41,7 @@ export default function Kontakt() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -65,7 +70,9 @@ export default function Kontakt() {
             <Phone size={14} />
             Wir sind für Sie da
           </div>
-          <h1 className="kontakt-hero__title">Kontakt & Terminvereinbarung</h1>
+          <h1 className="kontakt-hero__title">
+            Kontakt und Terminvereinbarung
+          </h1>
           <p className="kontakt-hero__subtitle">
             Sie haben Fragen oder möchten einen Termin vereinbaren? Schreiben
             Sie uns oder rufen Sie uns an — wir melden uns schnellstmöglich bei
@@ -88,7 +95,8 @@ export default function Kontakt() {
                     alignItems: "center",
                     textAlign: "center",
                     gap: "var(--space-lg)",
-                  }}>
+                  }}
+                >
                   <div
                     style={{
                       width: "70px",
@@ -100,7 +108,8 @@ export default function Kontakt() {
                       alignItems: "center",
                       justifyContent: "center",
                       fontSize: "2rem",
-                    }}>
+                    }}
+                  >
                     ✓
                   </div>
                   <h3
@@ -108,7 +117,8 @@ export default function Kontakt() {
                       fontFamily: "var(--font-heading)",
                       fontSize: "var(--fs-lg)",
                       color: "var(--color-primary)",
-                    }}>
+                    }}
+                  >
                     Vielen Dank für Ihre Nachricht!
                   </h3>
                   <p
@@ -116,7 +126,8 @@ export default function Kontakt() {
                       fontSize: "var(--fs-base)",
                       color: "var(--color-text-light)",
                       lineHeight: 1.8,
-                    }}>
+                    }}
+                  >
                     Wir haben Ihre Anfrage erhalten und melden uns so schnell
                     wie möglich bei Ihnen.
                   </p>
@@ -179,7 +190,8 @@ export default function Kontakt() {
                       className="kontakt-form__select"
                       name="anliegen"
                       value={formData.anliegen}
-                      onChange={handleChange}>
+                      onChange={handleChange}
+                    >
                       <option value="">Bitte wählen...</option>
                       <option value="diabetologie">Diabetologie</option>
                     </select>
@@ -205,7 +217,8 @@ export default function Kontakt() {
 
                   <button
                     className="kontakt-form__submit"
-                    onClick={handleSubmit}>
+                    onClick={handleSubmit}
+                  >
                     <Send size={17} />
                     Nachricht absenden
                   </button>
@@ -229,7 +242,8 @@ export default function Kontakt() {
                       </span>
                       <a
                         href="tel:06941 2430"
-                        className="kontakt-sidebar__item-value">
+                        className="kontakt-sidebar__item-value"
+                      >
                         069 41 24 30
                       </a>
                     </div>
@@ -259,7 +273,8 @@ export default function Kontakt() {
                       </span>
                       <a
                         href="mailto:kontakt@praxis-chadli.de"
-                        className="kontakt-sidebar__item-value">
+                        className="kontakt-sidebar__item-value"
+                      >
                         kontakt@praxis-chadli.de
                       </a>
                     </div>
@@ -307,6 +322,12 @@ export default function Kontakt() {
                       {h.time ? (
                         <span className="kontakt-sidebar__hour-time">
                           {h.time}
+                          {/* Hinweis Mittwochs-Nachmittag */}
+                          {h.note && (
+                            <span className="kontakt-sidebar__hour-note">
+                              {h.note}
+                            </span>
+                          )}
                         </span>
                       ) : (
                         <span className="kontakt-sidebar__hour-closed">

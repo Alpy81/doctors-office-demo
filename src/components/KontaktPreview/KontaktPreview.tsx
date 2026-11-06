@@ -1,20 +1,17 @@
-import { NavLink } from "react-router-dom";
-import {
-  MapPin,
-  Clock,
-  Phone,
-  Mail,
-  ArrowRight,
-  CalendarCheck,
-} from "lucide-react";
+import { MapPin, Clock, Phone, Mail, ArrowRight } from "lucide-react";
 import "./KontaktPreview.css";
 
 const hours = [
-  { day: "Montag", time: "09:00 - 15:00" },
-  { day: "Dienstag", time: "09:00 - 15:00" },
-  { day: "Mittwoch", time: "08:00 – 12:00" },
+  { day: "Montag", time: "09:00 – 15:00" },
+  { day: "Dienstag", time: "09:00 – 15:00" },
+  // Hinweis Mittwochs-Nachmittag (optionales Feld "note")
+  {
+    day: "Mittwoch",
+    time: "08:00 – 12:00",
+    note: "Nachmittags nach Vereinbarung",
+  },
   { day: "Donnerstag", time: "09:00 – 15:00" },
-  { day: "Freitag", time: "09:00 – 12:00" },
+  { day: "Freitag", time: "08:00 – 12:00" },
   { day: "Samstag", time: null },
   { day: "Sonntag", time: null },
 ];
@@ -67,15 +64,23 @@ export default function KontaktPreview() {
             </div>
             <div className="kontakt-preview__hours">
               {hours.map((h) => (
-                <div className="kontakt-preview__hour-row" key={h.day}>
-                  <span className="kontakt-preview__hour-day">{h.day}</span>
-                  <div className="kontakt-preview__hour-divider" />
-                  {h.time ? (
-                    <span className="kontakt-preview__hour-time">{h.time}</span>
-                  ) : (
-                    <span className="kontakt-preview__hour-closed">
-                      Geschlossen
-                    </span>
+                <div className="kontakt-preview__hour-item" key={h.day}>
+                  <div className="kontakt-preview__hour-row">
+                    <span className="kontakt-preview__hour-day">{h.day}</span>
+                    <div className="kontakt-preview__hour-divider" />
+                    {h.time ? (
+                      <span className="kontakt-preview__hour-time">
+                        {h.time}
+                      </span>
+                    ) : (
+                      <span className="kontakt-preview__hour-closed">
+                        Geschlossen
+                      </span>
+                    )}
+                  </div>
+                  {/* Hinweis Mittwochs-Nachmittag */}
+                  {h.note && (
+                    <span className="kontakt-preview__hour-note">{h.note}</span>
                   )}
                 </div>
               ))}
@@ -124,10 +129,6 @@ export default function KontaktPreview() {
                 </div>
               </div>
             </div>
-            <NavLink to="/kontakt" className="kontakt-preview__cta">
-              <CalendarCheck size={18} />
-              Termin vereinbaren
-            </NavLink>
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import {
   FlaskConical,
   Microscope,
   ShieldCheck,
+  Users,
   CalendarCheck,
   ArrowRight,
   ChevronRight,
@@ -67,10 +68,67 @@ const checkups = [
   },
 ];
 
+const dmpTyp1 = [
+  {
+    icon: <Droplets size={20} />,
+    text: "Regelmäßige HbA1c-Kontrollen und individuelle Therapieanpassung",
+  },
+  {
+    icon: <Activity size={20} />,
+    text: "Optimierung der Insulintherapie — konventionell, intensiviert oder per Insulinpumpe",
+  },
+  {
+    icon: <ShieldCheck size={20} />,
+    text: "Früherkennung und Behandlung von Folgeerkrankungen wie Neuropathie, Nephropathie und Retinopathie",
+  },
+  {
+    icon: <BookOpen size={20} />,
+    text: "Strukturierte Schulungen zur Stärkung der Eigenverantwortung und Handlungssicherheit",
+  },
+  {
+    icon: <Heart size={20} />,
+    text: "Betreuung bei Begleiterkrankungen wie Bluthochdruck und Fettstoffwechselstörungen",
+  },
+  {
+    icon: <ClipboardList size={20} />,
+    text: "Führung und Aktualisierung des Diabetes-Passes sowie vollständige Dokumentation",
+  },
+];
+
+const dmpTyp2 = [
+  {
+    icon: <Stethoscope size={20} />,
+    text: "Umfassende Erstuntersuchung und Einschreibung ins DMP mit individuellem Behandlungsplan",
+  },
+  {
+    icon: <Droplets size={20} />,
+    text: "Regelmäßige Blutzucker- und HbA1c-Kontrollen sowie Anpassung der medikamentösen Therapie",
+  },
+  {
+    icon: <Activity size={20} />,
+    text: "Beratung zu Lebensstiländerungen: Ernährung, Bewegung und Gewichtsreduktion",
+  },
+  {
+    icon: <ShieldCheck size={20} />,
+    text: "Vorsorgeuntersuchungen zur Früherkennung diabetischer Folgeschäden an Augen, Nieren, Nerven und Gefäßen",
+  },
+  {
+    icon: <Users size={20} />,
+    text: "Einbeziehung von Angehörigen und koordinierte Zusammenarbeit mit Fachärzten und Therapeuten",
+  },
+  {
+    icon: <BookOpen size={20} />,
+    text: "Teilnahme an Schulungsprogrammen zur Stärkung von Wissen und Eigenverantwortung",
+  },
+];
+
 const weitereLeistungen = [
   { label: "Hausärztliche Versorgung", path: "/leistungen/hausaerztlich" },
   { label: "Internistische Leistungen", path: "/leistungen/internistisch" },
-  { label: "Schulungen & Ernährungsberatung", path: "/leistungen/schulungen" },
+  {
+    label: "Schulungen & Ernährungsberatung",
+    path: "/leistungen/schulungen-diabetes",
+  },
   { label: "DMP-Programme", path: "/leistungen/dmp" },
   { label: "Vorsorge & Check-up", path: "/leistungen/vorsorge" },
 ];
@@ -139,6 +197,52 @@ export default function Diabetologie() {
                 </div>
               </div>
 
+              {/* DMP Diabetes Typ 1 */}
+              <div>
+                <h2 className="leistung-content__section-title">
+                  DMP Diabetes Typ 1
+                </h2>
+                <div className="leistung-list">
+                  {dmpTyp1.map((item, i) => (
+                    <div className="leistung-list__item" key={i}>
+                      <div className="leistung-list__icon">{item.icon}</div>
+                      <span className="leistung-list__text">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* DMP Diabetes Typ 2 */}
+              <div>
+                <h2 className="leistung-content__section-title">
+                  DMP Diabetes Typ 2
+                </h2>
+                <div className="leistung-list">
+                  {dmpTyp2.map((item, i) => (
+                    <div className="leistung-list__item" key={i}>
+                      <div className="leistung-list__icon">{item.icon}</div>
+                      <span className="leistung-list__text">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Hinweis-Banner zu DMP-Programme */}
+                <div className="leistung-hint">
+                  <div className="leistung-hint__text">
+                    <span className="leistung-hint__label">
+                      Weitere Programme
+                    </span>
+                    <span className="leistung-hint__title">
+                      DMP für KHK, Asthma & COPD
+                    </span>
+                  </div>
+                  <NavLink to="/leistungen/dmp" className="leistung-hint__btn">
+                    Mehr erfahren
+                    <ArrowRight size={16} />
+                  </NavLink>
+                </div>
+              </div>
+
               {/* Check-ups */}
               <div>
                 <h2 className="leistung-content__section-title">
@@ -178,7 +282,8 @@ export default function Diabetologie() {
                     <NavLink
                       key={item.path}
                       to={item.path}
-                      className="leistung-sidebar__link">
+                      className="leistung-sidebar__link"
+                    >
                       <ArrowRight size={15} />
                       {item.label}
                     </NavLink>

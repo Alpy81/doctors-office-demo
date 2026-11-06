@@ -47,7 +47,7 @@ export default function Vita() {
               </div>
               <div className="team-page-doctor__body">
                 <span className="team-page-doctor__role">
-                  Arzt & Praxisinhaber
+                  Arzt und Praxisinhaber
                 </span>
                 <h2 className="team-page-doctor__name">
                   Heur docteur en médecine Fayçal Chadli
@@ -74,7 +74,9 @@ export default function Vita() {
           {/* ── Praxismanagement ── */}
           <div className="team-page-section">
             <span className="team-page-eyebrow">Praxismanagement</span>
-            <h2 className="team-page-section-title">Organisation & Leitung</h2>
+            <h2 className="team-page-section-title">
+              Organisation und Leitung
+            </h2>
             <div className="team-page-grid team-page-grid--one">
               <div className="team-page-card">
                 <div className="team-page-card__image">
@@ -95,7 +97,7 @@ export default function Vita() {
           {/* ── Diabetesberatung ── */}
           <div className="team-page-section">
             <span className="team-page-eyebrow">Diabetesberatung</span>
-            <h2 className="team-page-section-title">Beratung & Schulung</h2>
+            <h2 className="team-page-section-title">Beratung und Schulung</h2>
             <div className="team-page-grid team-page-grid--two">
               <div className="team-page-card">
                 <div className="team-page-card__image">

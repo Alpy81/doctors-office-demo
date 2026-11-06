@@ -163,6 +163,26 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Wrapper pro Tag + Hinweis (Mittwoch) */
+.kontakt-preview__hour-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mittwoch (Zeile mit Hinweis): Abstand oben und unten */
+.kontakt-preview__hour-item:has(.kontakt-preview__hour-note) {
+  margin-block: 0.75rem;
+}
+
+.kontakt-preview__hour-note {
+  align-self: flex-end;
+  margin-top: 4px;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--color-secondary);
+  white-space: nowrap;
+}
+
 /* ── Kontakt Block ── */
 .kontakt-preview__contacts {
   display: flex;
@@ -224,7 +244,8 @@
   font-weight: 600;
   text-decoration: none;
   width: fit-content;
-  transition: transform var(--transition-fast),
+  transition:
+    transform var(--transition-fast),
     box-shadow var(--transition-fast);
   box-shadow: 0 6px 20px rgba(192, 57, 43, 0.35);
 }
